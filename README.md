@@ -1,6 +1,13 @@
 # YouTube.Live
 
+```
+Great Live Music. Period.
+
+```
+
 ## Description 
+
+Attend live concerts right from the comfort of your own home.  Watch musical performances from your favorite artists in concert venues all around the world. Discover rare intimate peformances and historic sold out shows. (add more...)
 
 
 ## Table of Contents
@@ -16,14 +23,24 @@
 
 ## Features
 
-If your project has a lot of features, consider adding a heading called "Features" and listing them there.
+--info/facts about artists and musical venues? Stories behind the music/
+--share/like/comment on videos and performances.
+--Save/create your own library of live music.  
+
 ## Technologies 
+
 [Trello](https://trello.com/) Agile Project Management with Scrum/Kanban Boards
+
 [Adobe Spark](https://spark.adobe.com/page/tRIlDi39DdX6h/) WireFrame/Mockup of UI/UX design.
+
 [ReactJS](https://github.com/facebook/react)A declarative, efficient, and flexible JavaScript library for building user interfaces.
+
 [NodeJS](https://github.com/nodejs/node) open-source, cross-platform, JavaScript runtime environment.
+
 [ExpressJS](https://github.com/expressjs) Fast, unopinionated, minimalist web framework for node.
-[React-Bulma-Components](https://react-bulma.dev/en) React wrapper with Bulma Components 
+
+[React-Bulma-Components](https://react-bulma.dev/en) React wrapper with Bulma Components
+
 [Bulma](https://bulma.io/)FrontEnd CSS framework
 
 ## Installation
@@ -55,20 +72,11 @@ What are the steps required to install your project? Provide a step-by-step desc
 * Must meet good quality coding standards (indentation, scoping, naming).
 * Must not expose sensitive API key information on the server.
 
-
-
-
----
-
-🏆 The sections listed above are the minimum for a good README, but your project will ultimately determine the content of this document. You might also want to consider adding the following sections.
-
 ## Badges
 
 ![badmath](https://img.shields.io/github/languages/top/nielsenjared/badmath)
 
 Badges aren't _necessary_, per se, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
-
-
 
 ## Contributing
 
@@ -77,8 +85,6 @@ If you created an application or package and would like other developers to cont
 ## Tests
 
 Go the extra mile and write tests for your application. Then provide examples on how to run them.
-
----
 
 ## License
 

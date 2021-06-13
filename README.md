@@ -50,13 +50,14 @@ What are the steps required to install your project? Provide a step-by-step desc
 ## Usage 
 
 
+
 ## Collaborators
 
 |           |            |            |            |
 |-----------|------------|------------|------------|
-|![Anthony](/src/images/anthony.jpeg?raw=true "Anthony DeCapite")|[Anthony's Work](https://github.com/adecapite)|![Kyle](/src/images/kyle.jpeg?raw=true "Kyle Young")|[Kyle's Work](https://github.com/Youngin9210)
-|![Mo](/src/images/mo.png?raw=true "Mo Ager")|[Mo's Work](https://github.com/moagermo)|![Morgan](/src/images/morgan.png?raw=true "Morgan Schall")|[Morgan's Work](https://github.com/mschall217)|
-|![Ryan](/src/images/ryan.jpeg?raw=true "Ryan Evans")|[Ryan's Work](https://github.com/rdevans87)|
+|![Anthony](/client/src/images/anthony.jpeg?raw=true "Anthony DeCapite")|[Anthony's Work](https://github.com/adecapite)|![Kyle](/client/src/images/kyle.jpeg?raw=true "Kyle Young")|[Kyle's Work](https://github.com/Youngin9210)
+|![Mo](/client/src/images/mo.png?raw=true "Mo Ager")|[Mo's Work](https://github.com/moagermo)|![Morgan](/client/src/images/morgan.png?raw=true "Morgan Schall")|[Morgan's Work](https://github.com/mschall217)|
+|![Ryan](/client/src/images/ryan.jpeg?raw=true "Ryan Evans")|[Ryan's Work](https://github.com/rdevans87)|
 
 ## Acceptance Criteria
 

@@ -1,5 +1,5 @@
 {
-  "name": "mern",
+  "name": "cms",
   "version": "0.1.0",
   "private": true,
   "proxy": "http://localhost:3001/",
@@ -7,7 +7,7 @@
     "axios": "^0.18.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-router-dom": "^5.1.2",
+    "react-router-dom": "^4.3.1",
     "react-scripts": "3.4.3"
   },
   "scripts": {

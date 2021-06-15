@@ -1,12 +1,10 @@
 .NavbarItems{
-    background: linear-gradient(90deg, rgb(110, 94, 254) 0%, rgba(73, 63, 252, 1) 100%);
+    background: linear-gradient(90deg, rgb(86, 173, 220) 0%, rgb(63, 233, 252) 100%);
     height: 80px;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     font-size: 1.2rem;
-
-    
 }
 
 .navbar-logo{
@@ -14,11 +12,13 @@
     justify-self: start;
     margin-left: 20px;
     cursor: pointer;
+    font-family: 'lobster', sans-serif
 }
 
 .logo{
     left: 0%;
     font-size: 1.6rem;
-    height: 100px;
-    width: 100px;
+    height: 70px;
+    width: 70px;
+    cursor: pointer;
 }

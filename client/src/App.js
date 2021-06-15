@@ -9,7 +9,6 @@ const App = () =>
   return(
     <div className="App">
       <Navbar />
-      <img src={logo}/>
       <Button />
       <ArtistPic />
     </div>

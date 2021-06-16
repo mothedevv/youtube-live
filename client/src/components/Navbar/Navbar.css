@@ -8,7 +8,7 @@
 }
 
 .navbar-logo{
-    color: #fff;
+    color: black;
     justify-self: start;
     margin-left: 20px;
     cursor: pointer;
@@ -35,9 +35,11 @@
 }
 
 .nav-links{
-    color: white;
+    color: #9449B6;
     text-decoration: none;
     padding: 0.5rem, 1rem;
+    text-shadow: black;
+    font-size: larger;
 }
 
 .nav-links:hover{
@@ -47,7 +49,7 @@
 }
 
 .fa-bars{
-    color: #fff;
+    color: #9449B6;
 }
 
 .nav-links-mobile{

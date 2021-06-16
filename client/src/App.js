@@ -9,8 +9,8 @@ const App = () =>
   return(
     <div className="App">
       <Navbar />
-      <Button />
-      <ArtistPic />
+      
+      
     </div>
   )
 }

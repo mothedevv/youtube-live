@@ -3,34 +3,34 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 constvideoSchema = new Schema({
-    date: {
-        type: Date,
+    : {
+        type: ,
         default: Date.now,
     },
     exercises: [
         {
-            type: {
+            title: {
                 type: String,
                 trim: true,
                 required: "Excercise Type."
             },
-            name: {
+            title: {
                 type: String,
                 trim: true,
                 required: "Exercise Name."
             },
-            duration: {
+            description: {
                 type: Number,
                 required: "Excercise Duration."
             },
             distance: {
                 type: Number,
             },
-            weight: {
+            category: {
                 type: Number,
 
             },
-            reps: {
+            duration: {
                 type: Number,
             },
             sets: {

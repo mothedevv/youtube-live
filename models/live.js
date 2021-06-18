@@ -12,64 +12,19 @@ const Post = mongoose.model("Post", postSchema);
 
 module.exports = Post;
 
+
+//THIS IS FROM A MYSQL ACTIVITY NOT SURE IF WE WILL USE ANY OF THIS SINCE WE ARE USING MONGO, HOWEVER IT MIGHT BE A GOOD EXAMPLE FOR SEARCH QUERY PERAMETERS
+
 // connection.connect((err) => {
 //     if (err) throw err;
 //     runSearch();
 //   });
   
 //   const runSearch = () => {
-//     inquirer
-//       .prompt({
-//         name: 'action',
-//         type: 'list',
-//         message: 'What would you like to do?',
-//         choices: [
-//           'Find songs by artist',
-//           'Find all artists who appear more than once',
-//           'Find data within a specific range',
-//           'Search for a specific song',
-//           'exit',
-//         ],
-//       })
-//       .then((answer) => {
-//         switch (answer.action) {
-//           case 'Find songs by artist':
-//             artistSearch();
-//             break;
-  
-//           case 'Find all artists who appear more than once':
-//             multiSearch();
-//             break;
-  
-//           case 'Find data within a specific range':
-//             rangeSearch();
-//             break;
-  
-//           case 'Search for a specific song':
-//             songSearch();
-//             break;
-  
-//           case 'Exit':
-//             connection.end();
-//             break;
-  
-//           default:
-//             console.log(`Invalid action: ${answer.action}`);
-//             break;
-//         }
-//       });
-//   };
-  
+
+//    
 //   const artistSearch = () => {
-//     inquirer
-//       .prompt({
-//         name: 'artist',
-//         type: 'input',
-//         message: 'What artist would you like to search for?',
-//       })
-//       .then((answer) => {
-//         const query =
-//         connection.query(query, { artist: answer.artist }, (err, res) => {
+//         connection.query(query, { artist: input.artist }, (err, res) => {
 //           if (err) throw err;
 //           res.forEach(({ position, song, year }) => {
 //             console.log(
@@ -91,12 +46,7 @@ module.exports = Post;
 //   };
   
 //   const rangeSearch = () => {
-//     inquirer
-//       .prompt([
-//         {
-//           name: 'start',
-//           type: 'input',
-//           message: 'Enter starting position: ',
+//   
 //           validate(value) {
 //             if (isNaN(value) === false) {
 //               return true;
@@ -105,9 +55,7 @@ module.exports = Post;
 //           },
 //         },
 //         {
-//           name: 'end',
-//           type: 'input',
-//           message: 'Enter ending position: ',
+//          
 //           validate(value) {
 //             if (isNaN(value) === false) {
 //               return true;
@@ -116,10 +64,9 @@ module.exports = Post;
 //           },
 //         },
 //       ])
-//       .then((answer) => {
 //         const query =
 //          ;
-//         connection.query(query, [answer.start, answer.end], (err, res) => {
+//         connection.query(query, ], (err, res) => {
 //           if (err) throw err;
 //           res.forEach(({ position, song, artist, year }) =>
 //             console.log(
@@ -132,17 +79,9 @@ module.exports = Post;
 //   };
   
 //   const songSearch = () => {
-//     inquirer
-//       .prompt({
-//         name: 'song',
-//         type: 'input',
-//         message: 'What song would you like to look for?',
-//       })
-//       .then((answer) => {
-//         console.log(`You searched for "${answer.song}"`);
-//         connection.query(
+//     
 
-//           { song: answer.song },
+//           { song: input.song },
 //           (err, res) => {
 //             if (err) throw err;
 //             if (res[0]) {

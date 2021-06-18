@@ -3,7 +3,6 @@ const Schema = mongoose.Schema;
 const videoSchema = new Schema({
    
     
-    
     song: {
         type: Schema.Types.ObjectId,
         ref: "User"
@@ -25,10 +24,16 @@ const videoSchema = new Schema({
             },
             category: {
                 type: Number,
-
             },
+
+            year: {
+            type: Number,
+            
+            },
+
             duration: {
-                type: Number,
+                type: Number;
+            
             },
             views: {
                 type: Number,

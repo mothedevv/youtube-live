@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 
-class SearchBar extends Component {
+class Search extends Component {
   constructor(props) {
     super(props);
 
@@ -10,7 +10,7 @@ class SearchBar extends Component {
 
   render() {
     return (
-      <div className="search-bar">
+      <div className="search">
         <input
         value={this.state.term} 
         placeholder="Search here..." 
@@ -25,4 +25,4 @@ class SearchBar extends Component {
   }
 }
 
-export default SearchBar;
+export default Search;

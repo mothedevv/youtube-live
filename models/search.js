@@ -15,5 +15,18 @@ class App extends Component {
       selectedVideo: null 
     };
 
-    this.videoSearch('cats');
+    this.videoSearch('');
   }
+  videoSearch(term) {
+    YTSearch({ key: YOUTUBE_API_KEY, term: term}, (videos) => {
+      this.setState({ 
+        videos: videos, 
+        selectedVideo: videos[0]
+      });
+    });
+  }
+
+//   ReactDOM.render(
+//     <App />,
+//     document.querySelector('.container')
+//   );

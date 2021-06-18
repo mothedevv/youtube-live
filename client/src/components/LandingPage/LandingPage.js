@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 import logo from '../../images/logo.svg'
-import './LandingPage.css'
+import './css/bootstrap.min.css'
+import './css/ionicons.min.css'
+import './css/style.css'
+import './css/bootstrap/mixins/_visibility.css'
+import './fonts/ionicons/css/ionicons.min.css'
+import './fonts/ionicons/fonts/ionicons.svg'
+
 
 const LandingPage = () => {
     return(
@@ -96,11 +102,6 @@ const LandingPage = () => {
                     </div>
                 </div>
             </body>
-
-            <script src="./js/jquery.min.js"></script>
-            <script src="./js/popper.js"></script>
-            <script src="./js/bootstrap.min.js"></script>
-            <script src="./js/main.js"></script>
         </div>
 
 

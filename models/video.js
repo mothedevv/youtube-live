@@ -1,50 +1,57 @@
 const mongoose = require("mongoose");
-
 const Schema = mongoose.Schema;
-
-constvideoSchema = new Schema({
-    : {
-        type: ,
-        default: Date.now,
+const videoSchema = new Schema({
+   
+    
+    song: {
+        type: Schema.Types.ObjectId,
+        ref: "User"
     },
-    exercises: [
-        {
+    
             title: {
                 type: String,
-                trim: true,
-                required: "Excercise Type."
+                maxlength: 50,
             },
-            title: {
+            artist: {
                 type: String,
-                trim: true,
-                required: "Exercise Name."
+                
             },
             description: {
                 type: Number,
-                required: "Excercise Duration."
             },
-            distance: {
+            genre: {
                 type: Number,
             },
             category: {
                 type: Number,
+            },
+
+            year: {
+            type: Number,
+            
+            },
+
+            duration: {
+                type: Number;
+            
+            },
+            views: {
+                type: Number,
 
             },
             duration: {
-                type: Number,
+                type: String
             },
-            sets: {
-                type: Number,
+            thumbnail: {
+                type: String
+            }
+        
+ },         { timestamps: true })
 
-            },
-        },
-    ],
 
-});
+const Video = mongoose.model("Video", videoSchema);
 
-const Fitness = mongoose.model("Fitness", fitnessSchema);
-
-module.exports = Fitness;
+module.exports = { Video }
 
 
 

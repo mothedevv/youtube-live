@@ -28,7 +28,8 @@ router.post('/', async (req, res) => {
           username: req.body.username,
         },
       });
-  
+    
+    
       if (!user) {
         res.status(400).json({ message: 'No user account found!' });
         return;
@@ -40,7 +41,6 @@ router.post('/', async (req, res) => {
         res.status(400).json({ message: 'No user account found!' });
         return;
       }
-  
   
 
 module.exports = router;

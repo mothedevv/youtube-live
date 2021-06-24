@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Navbar from '../src/components/Navbar/Navbar';
@@ -22,5 +23,6 @@ const App = () => {
 		</Router>
 	);
 };
+
 
 export default App;

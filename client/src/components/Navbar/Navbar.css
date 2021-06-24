@@ -7,21 +7,7 @@
     font-size: 1.2rem;
 }
 
-.navbar-logo{
-    color: black;
-    justify-self: start;
-    margin-left: 20px;
-    cursor: pointer;
-    font-family: 'lobster', sans-serif
-}
 
-.logo{
-    left: 0%;
-    font-size: 1.6rem;
-    height: 70px;
-    width: 70px;
-    cursor: pointer;
-}
 
 .nav-menu{
     display: grid;

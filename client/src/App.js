@@ -1,19 +1,24 @@
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Navbar from '../src/components/Navbar/Navbar';
 import './App.css';
-import logo from './images/logo.svg'
-import React from 'react'
-import Button from './components/Button'
-import ArtistPic from './components/ArtistPic'
-import Navbar from '../src/components/Navbar/Navbar'
-const App = () =>
-{
-  return(
-    <div className="App">
-      <Navbar />
-      <ArtistPic />
-      
-      
-    </div>
-  )
-}
+import Landing from './pages/landingPage/Landing';
+import Login from './pages/login/Login';
+const App = () => {
+	return (
+		<Router>
+			<div>
+				<Navbar />
+				{/* <ArtistPic /> */}
+				<div>
+					<Switch>
+						<Route exact path="/" component={Landing} />
+						<Route exact path="/login" component={Login} />
+					</Switch>
+				</div>
+			</div>
+		</Router>
+	);
+};
 
 export default App;

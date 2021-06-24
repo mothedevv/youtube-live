@@ -1,12 +1,21 @@
 import React from 'react'
-import LandingPage from './components/LandingPage/LandingPage';
-
+import Header from './components/Header';
+import LandingPage from './components/LandingPage'
+import './App.css';
+import {BrowserRouter as Router} from 'react-router-dom'
 const App = () =>
 {
   return(
-    <div className="App">
-      <LandingPage />
-    </div>
+    <Router>
+      <div>
+        <div id="site-content">
+          <Header />
+          <LandingPage />
+        </div>
+
+        
+      </div>
+    </Router>
   )
 }
 

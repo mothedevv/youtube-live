@@ -17,7 +17,17 @@ app.use(routes);
 
 // Connect to the Mongo DB
 mongoose.connect(
-	process.env.MONGODB_URI || 'mongodb://localhost/youtubeLiveDB'
+	process.env.MONGODB_URI || 'mongodb://localhost/youtubeLiveDB',
+	{
+		// allowing app to fall back to old parser incase of bug finds
+		useNewUrlParser: true,
+		// removes connection options that are no longer relevant with new topology engine
+		useUnifiedTopology: true,
+		// using mongoose default engine build
+		useCreateIndex: true,
+		// using native findOneAndUpdate()
+		useFindAndModify: false,
+	}
 );
 
 // Start the API server

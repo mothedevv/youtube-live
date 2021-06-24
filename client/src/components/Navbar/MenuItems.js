@@ -6,7 +6,7 @@ export const MenuItems = [
 	},
 	{
 		title: 'Signup',
-		url: '#',
+		url: '/signup',
 		cName: 'nav-links',
 	},
 	{

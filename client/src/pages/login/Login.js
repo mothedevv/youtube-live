@@ -9,6 +9,7 @@ export default function Login() {
 
 		console.log(usernameRef.current.value);
 		console.log(passwordRef.current.value);
+
 		User.login({
 			username: usernameRef.current.value,
 			password: passwordRef.current.value,

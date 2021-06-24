@@ -4,6 +4,7 @@ import Navbar from '../src/components/Navbar/Navbar';
 import './App.css';
 import Landing from './pages/landingPage/Landing';
 import Login from './pages/login/Login';
+import SignUp from './pages/signup/SignUp';
 const App = () => {
 	return (
 		<Router>
@@ -13,6 +14,7 @@ const App = () => {
 				<div>
 					<Switch>
 						<Route exact path="/" component={Landing} />
+						<Route exact path="/signup" component={SignUp} />
 						<Route exact path="/login" component={Login} />
 					</Switch>
 				</div>

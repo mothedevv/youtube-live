@@ -72,8 +72,12 @@ module.exports = {
 					.json({ msg: 'Username has not been registered. Please try again.' });
 
 			const isMatch = await bcrypt.compare(password, user.password);
+
 			!isMatch &&
-				res.status(422).json({ msg: 'Incorrect password. Please try again.' });
+				res.send({
+					message: 'Not Found',
+					status: 404,
+				});
 
 			const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET);
 
@@ -88,7 +92,8 @@ module.exports = {
 				},
 			});
 		} catch (err) {
-			res.status(422).json(err.message);
+			console.log('KYLE', err);
+			res.status(422).json(JSON.parse(JSON.stringify(err)));
 		}
 	},
 

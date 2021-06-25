@@ -1,8 +1,19 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { Link } from 'react-router-dom';
 import '../App.css';
+import UserAPI from '../utils/UserAPI';
+import { UserContext } from '../utils/UserContext';
 import logo from './logo.svg';
 
 function Navbar() {
+	const [loggedIn, setLoggedIn] = useContext(UserContext);
+
+	const handleLogout = (e) => {
+		e.preventDefault();
+		UserAPI.logout();
+		setLoggedIn(false);
+	};
+
 	return (
 		<nav className="navbar navbar-expand-lg navbar-light">
 			<h1 id="logoMain" href="/">
@@ -11,8 +22,8 @@ function Navbar() {
 			<button
 				className="navbar-toggler border-0"
 				type="button"
-				data-toggle="collapse"
-				data-target="#navbar"
+				data-bs-toggle="collapse"
+				data-bs-target="#navbar"
 				aria-controls="navbar"
 				aria-expanded="false"
 				aria-label="Toggle navigation"
@@ -22,49 +33,59 @@ function Navbar() {
 			<div className="collapse navbar-collapse text-center" id="navbar">
 				<ul className="navbar-nav ml-auto">
 					<li className="nav-item">
-						<a className="nav-link" href="/">
+						<Link className="nav-link" to="/">
 							Home
-						</a>
+						</Link>
 					</li>
 					<li className="nav-item">
-						<a className="nav-link page-scroll" href="/features">
+						<Link className="nav-link page-scroll" to="/features">
 							Feature
-						</a>
+						</Link>
 					</li>
 					<li className="nav-item">
-						<a className="nav-link" href="/about">
+						<Link className="nav-link" to="/about">
 							About
-						</a>
+						</Link>
 					</li>
 					<li className="nav-item">
-						<a className="nav-link" href="/service">
+						<Link className="nav-link" to="/service">
 							Service
-						</a>
+						</Link>
 					</li>
 					<li className="nav-item">
-						<a className="nav-link page-scroll" href="/team">
+						<Link className="nav-link page-scroll" to="/team">
 							Team
-						</a>
+						</Link>
 					</li>
 					<li className="nav-item">
-						<a className="nav-link page-scroll" href="/pricing">
+						<Link className="nav-link page-scroll" to="/pricing">
 							Pricing
-						</a>
+						</Link>
 					</li>
 					<li className="nav-item">
-						<a className="nav-link" href="/contact">
+						<Link className="nav-link" to="/contact">
 							Contact
-						</a>
+						</Link>
 					</li>
 					<li className="nav-item">
-						<a className="nav-link" href="/login">
-							Login
-						</a>
+						{!loggedIn ? (
+							<Link className="nav-link" to="/login">
+								Login
+							</Link>
+						) : (
+							<Link
+								className="nav-link"
+								to="/"
+								onClick={(e) => handleLogout(e)}
+							>
+								Logout
+							</Link>
+						)}
 					</li>
 				</ul>
-				<a href="#" className="btn btn-primary ml-lg-3 primary-shadow">
+				<Link to="#" className="btn btn-primary ml-lg-3 primary-shadow">
 					Try Free
-				</a>
+				</Link>
 			</div>
 		</nav>
 	);

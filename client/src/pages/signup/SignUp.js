@@ -34,8 +34,8 @@ export default function SignUp() {
 	};
 
 	return (
-		<div className="container col-4 my-4">
-			<form action="" className="">
+		<div className="container my-4 d-flex justify-content-center">
+			<form action="" className="col-4">
 				<div className="mb-3">
 					<label htmlFor="firstNameSignUp" className="form-label">
 						First Name

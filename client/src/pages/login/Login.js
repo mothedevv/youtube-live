@@ -18,8 +18,8 @@ export default function Login() {
 			.catch((err) => console.log(err));
 	};
 	return (
-		<div className="container col-4 my-4">
-			<form action="" className="">
+		<div className="container my-4 d-flex justify-content-center">
+			<form action="" className="col-4">
 				<div className="mb-3">
 					<label htmlFor="usernameLogin" className="form-label">
 						Username
@@ -42,13 +42,18 @@ export default function Login() {
 						ref={passwordRef}
 					/>
 				</div>
-				<button
-					type="submit"
-					className="btn btn-primary"
-					onClick={(e) => handleLogin(e)}
-				>
-					Login
-				</button>
+				<div className="d-flex flex-column justify-content-center">
+					<a href="/signup" className="mb-2">
+						Don't have a user profile yet, click here to sign up!
+					</a>
+					<button
+						type="submit"
+						className="btn btn-primary"
+						onClick={(e) => handleLogin(e)}
+					>
+						Login
+					</button>
+				</div>
 			</form>
 		</div>
 	);

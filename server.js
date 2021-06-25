@@ -1,7 +1,8 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const cors = require('cors');
 const routes = require('./routes');
+const cookieParser = require('cookie-parser');
+const session = require('express-session');
 require('dotenv').config();
 
 const app = express();
@@ -11,7 +12,20 @@ const PORT = process.env.PORT || 3001;
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(cors());
+
+app.use(cookieParser());
+app.use(
+	session({
+		key: 'userId',
+		secret: process.env.SESSION_SECRET,
+		resave: false,
+		saveUninitialized: false,
+		cookie: {
+			// expires in 24 hours
+			expires: 60 * 60 * 24,
+		},
+	})
+);
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === 'production') {

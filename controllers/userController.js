@@ -1,6 +1,5 @@
 const db = require('../models');
 const bcrypt = require('bcryptjs');
-const jwt = require('jsonwebtoken');
 
 module.exports = {
 	signUp: async (req, res) => {
@@ -42,15 +41,23 @@ module.exports = {
 				const salt = await bcrypt.genSalt();
 				const passwordHash = await bcrypt.hash(password, salt);
 
-				await db.User.create({
+				const newUser = await db.User.create({
 					firstName: firstName,
 					lastName: lastName,
 					username: username,
 					email: email,
 					password: passwordHash,
-				})
-					.then((dbModel) => res.json(dbModel))
-					.catch((err) => res.status(422).json(err));
+				});
+
+				req.session.save(() => {
+					req.session.user_id = newUser._id;
+					req.session.logged_in = true;
+					console.log(req.session);
+					res.json({
+						newUser,
+						logged_in: req.session.logged_in,
+					});
+				});
 			}
 		} catch (err) {
 			res.status(422).json(err);
@@ -79,17 +86,20 @@ module.exports = {
 					status: 404,
 				});
 
-			const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET);
-
-			res.json({
-				token,
-				user: {
-					id: user._id,
-					firstName: user.firstName,
-					lastName: user.lastName,
-					email: user.email,
-					username: username,
-				},
+			req.session.save(() => {
+				req.session.user_id = user._id;
+				req.session.logged_in = true;
+				console.log(req.session);
+				res.json({
+					user: {
+						id: user._id,
+						firstName: user.firstName,
+						lastName: user.lastName,
+						email: user.email,
+						username: username,
+					},
+					logged_in: req.session.logged_in,
+				});
 			});
 		} catch (err) {
 			console.log('KYLE', err);
@@ -97,8 +107,9 @@ module.exports = {
 		}
 	},
 
-	// logout: (req, res) => {
-	// 	res.cookie('jwt', '', { maxAge: 1 });
-	// 	res.redirect('/');
-	// },
+	logout: (req, res) => {
+		req.session.logged_in
+			? req.session.destroy(() => res.status(204).end())
+			: res.status(404).end();
+	},
 };

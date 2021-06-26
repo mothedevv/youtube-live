@@ -1,12 +1,53 @@
 // const express = require('express');
 // const router = require("express").Router();
 // const videoController = reqiure("../..controllers/video")
-// // const { Video } = require("../../models/Video");
+const { video } = require("../../models/video");
 // //videoController = require("../../controllers.videoControllers");
-
+const router = express.Router();
 const express = require('express')
 const {
   getVideos,
   getVideo,
 } = require('../controllers/videos')
-// module.exports = router;
+
+router
+  .route('/public')
+  .get(
+    advancedResults(
+      Video,
+      [
+        { path: 'userId' },
+        { path: 'categoryId' },
+      ],
+      { status: 'public' }
+    ),
+    getVideos
+  )
+
+router
+  .route('/:id')
+  .get(getVideo)
+
+
+
+  router.get("/search", async (req, res) => {
+    const { search_query } = req.query;
+    try {
+      const videos = await Video.findByTitle(search_query);
+      res.json({
+        videos,
+      });
+    } catch (err) {
+      errorResponse(err, res);
+    }
+  });
+
+// router.route('/:id/thumbnails').put(protect, uploadVideoThumbnail)
+// router.route('/:id/views').put(protect, updateViews)
+
+
+
+
+
+
+module.exports = router;

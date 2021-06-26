@@ -1,28 +1,11 @@
-
 import React from "react";
-import VideoPlayer from "../VideoPlayer";
 
 
-export default class VideoPlayer extends React.Component {
+function VideoPlayer() 
 
-render(){
-   return(
+{
 
-
-       <iframe id="existing-iframe-example"
-        width="640" height="360"
-        src="https://www.youtube.com/embed/M7lc1UVf-VE?enablejsapi=1"
-        frameborder="0"
-        style="border: solid 4px #37474F"
-       ></iframe>
-
-        )
-
-    }
-
-}
-
-var tag = document.createElement('script');
+  var tag = document.createElement('script');
   tag.id = 'iframe-demo';
   tag.src = 'https://www.youtube.com/iframe_api';
   var firstScriptTag = document.getElementsByTagName('script')[0];
@@ -37,6 +20,7 @@ var tag = document.createElement('script');
         }
     });
   }
+
   function onPlayerReady(event) {
     document.getElementById('existing-iframe-example').style.borderColor = '#FF6D00';
   }
@@ -63,3 +47,17 @@ var tag = document.createElement('script');
     changeBorderColor(event.data);
   }
 
+     return(
+
+        <iframe id="existing-iframe-example"
+         width="640" height="360"
+         src="https://www.youtube.com/embed/M7lc1UVf-VE?enablejsapi=1"
+         frameborder="0"
+         style="border: solid 4px #37474F"
+        ></iframe>
+ 
+         );
+};
+     
+
+export default VideoPlayer;

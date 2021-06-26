@@ -1,13 +1,9 @@
-// import React, { Component } from 'react';
+import React, { Component } from 'react';
 
-
-
-
-
-
-const YOUTUBE_API_KEY = "[insert key here]"; 
+const YOUTUBE_API_KEY = "AIzaSyBWjCRjlWlbBEjBbEcXSLFNNylby-2hdLk"; 
 
 class Search extends Component {
+
   constructor(props) {
     super(props);
 

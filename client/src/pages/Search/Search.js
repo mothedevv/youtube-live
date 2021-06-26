@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-const YOUTUBE_API_KEY = "AIzaSyBWjCRjlWlbBEjBbEcXSLFNNylby-2hdLk"; 
+const YOUTUBE_API_KEY = ""; 
 
 class Search extends Component {
 
@@ -27,7 +27,7 @@ class Search extends Component {
       }
 
   videoSearch(term) {
-    YTSearch({ key: YOUTUBE_API_KEY, term: term}, (videos) => {
+    Search({ key: YOUTUBE_API_KEY, term: term}, (videos) => {
       this.setState({ 
         videos: videos, 
         selectedVideo: videos[0]

@@ -3,7 +3,7 @@
 // const videoController = reqiure("../..controllers/video")
 const { video } = require("../../models/video");
 // //videoController = require("../../controllers.videoControllers");
-const router = express.Router();
+// const router = express.Router();
 const express = require('express')
 const {
   getVideos,
@@ -14,7 +14,7 @@ router
   .route('/public')
   .get(
     advancedResults(
-      Video,
+      video,
       [
         { path: 'userId' },
         { path: 'categoryId' },
@@ -42,6 +42,21 @@ router
     }
   });
 
+
+  router.get(
+    "/:videoId",
+    /*auth, */ async (req, res) => {
+      const { userId } = req;
+      const { videoId } = req.params;
+      try {
+        const video = await Video.getVideo({ videoId, userId });
+        res.json({ video });
+      } catch (err) {
+        errorResponse(err, res);
+      }
+    }
+  );
+  
 // router.route('/:id/thumbnails').put(protect, uploadVideoThumbnail)
 // router.route('/:id/views').put(protect, updateViews)
 

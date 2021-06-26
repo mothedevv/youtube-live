@@ -7,8 +7,8 @@ const Video = require('../models/video')
 
 
 // @desc    Get videos
-// @route   GET /api/v1/videos/public or /api/v1/videos/private
-// @access  Public Or Private
+// @route   GET /api/v1/videos/public 
+// @access  Public 
 exports.getVideos = asyncHandler(async (req, res, next) => {
   res.status(200).json(res.advancedResults)
 })

@@ -8,13 +8,13 @@ function Header()
 {
     return(
 
-        <div class="site-header">
-			<div class="container">
+        <div className="site-header">
+			<div className="container">
 				<a href="/" id="branding">
 					<img id="logo" src={logo} alt="Site Title"/>
 				</a>
 				<Navbar />
-				<div class="mobile-menu"></div>
+				<div className="mobile-menu"></div>
 			</div>
 		</div>
             

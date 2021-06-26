@@ -1,42 +1,48 @@
-import React from 'react';
+import React, {useState} from 'react';
 import '../../../src/App.css';
+import BubblyButton from '../../components/BubblyButton';
+import {Link} from 'react-router-dom'
 
 
 function LandingPage()
 {
-    return(
-        <div class="hero">
-			<div class="slider">
-				<ul class="slides">
-					<li class="lazy-bg" data-background="dummy/slide-1.jpg">
-						<div class="container">
-							<h2 class="slide-title">Header goes here</h2>
-							<h3 class="slide-subtitle">Less important text goes here</h3>
-							<p class="slide-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br></br>Fugiat aliquid minus nemo sed est.</p>
+	const [button1, setButton1] = useState(['Try it Out'])
+	const [button2, setButton2] = useState(['Sign Up'])
 
-							<a href="/dashboard" class="button cut-corner">Try it Out</a>
-							<a href="/signup" class="button cut-corner">Sign Up</a>
+    return(
+        <div className="hero">
+			<div className="slider">
+				<ul className="slides">
+					<li className="lazy-bg" data-background="dummy/slide-1.jpg">
+						<div className="container">
+							<h2 className="slide-title">Header goes here</h2>
+							<h3 className="slide-subtitle">Less important text goes here</h3>
+							<p className="slide-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br></br>Fugiat aliquid minus nemo sed est.</p>
+
+							<Link to="/dashboard">{button1.map((b, index) => (<BubblyButton key ={index} value={b}/>))}</Link>
+							{button2.map((b, index) => (<BubblyButton key ={index} value={b}/>))}
+							
 							
 						</div>
 					</li>
-					<li class="lazy-bg" data-background="dummy/slide-2.jpg">
-						<div class="container">
-								<h2 class="slide-title">Header goes here</h2>
-								<h3 class="slide-subtitle">Less important text goes here</h3>
-								<p class="slide-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br></br>Fugiat aliquid minus nemo sed est.</p>
+					<li className="lazy-bg" data-background="dummy/slide-2.jpg">
+						<div className="container">
+								<h2 className="slide-title">Header goes here</h2>
+								<h3 className="slide-subtitle">Less important text goes here</h3>
+								<p className="slide-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br></br>Fugiat aliquid minus nemo sed est.</p>
 
-								<a href="/dashboard" class="button cut-corner">Try it Out</a>
-								<a href="/signup" class="button cut-corner">Sign Up</a>
+								{button1.map((b, index) => (<BubblyButton key ={index} value={b}/>))}
+								{button2.map((b, index) => (<BubblyButton key ={index} value={b}/>))}
 						</div>
 					</li>
-					<li class="lazy-bg" data-background="dummy/slide-3.jpg">
-						<div class="container">
-								<h2 class="slide-title">Header goes here</h2>
-								<h3 class="slide-subtitle">Less important text goes here</h3>
-								<p class="slide-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br></br>Fugiat aliquid minus nemo sed est.</p>
+					<li className="lazy-bg" data-background="dummy/slide-3.jpg">
+						<div className="container">
+								<h2 className="slide-title">Header goes here</h2>
+								<h3 className="slide-subtitle">Less important text goes here</h3>
+								<p className="slide-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br></br>Fugiat aliquid minus nemo sed est.</p>
 
-								<a href="/dashboard" class="button cut-corner">Try it Out</a>
-								<a href="/signup" class="button cut-corner">Sign Up</a>
+								{button1.map((b, index) => (<BubblyButton key ={index} value={b}/>))}
+								{button2.map((b, index) => (<BubblyButton key ={index} value={b}/>))}
 						</div>
 					</li>
 				</ul>

@@ -8,6 +8,9 @@
  * Importing CSS Libraries
  *===========================================*/
 /* line 45, sass/libs/_normalize.scss */
+
+
+
 article,
 aside,
 details,
@@ -38,6 +41,12 @@ audio:not([controls]) {
 /* line 84, sass/libs/_normalize.scss */
 [hidden], template {
   display: none; }
+
+.logo
+{
+  margin-top: 0;
+  margin-left: 0;
+}
 
 /* line 97, sass/libs/_normalize.scss */
 html {
@@ -1835,7 +1844,7 @@ body {
         opacity: 0;
         border-left: 4px solid transparent;
         border-right: 4px solid transparent;
-        border-bottom: 4px solid #fd5927;
+        border-bottom: 4px solid lightblue;
         -webkit-transition: .3s ease;
                 transition: .3s ease; }
       /* line 75, sass/layout/_header.scss */
@@ -1846,13 +1855,13 @@ body {
         opacity: 1; }
       /* line 80, sass/layout/_header.scss */
       .main-navigation .menu .menu-item:hover a, .main-navigation .menu .menu-item.current-menu-item a {
-        color: #fd5927; }
+        color: lightblue; }
     /* line 84, sass/layout/_header.scss */
     .main-navigation .menu a {
       display: block;
       position: relative;
       padding: 45px 20px;
-      color: white;
+      color: lightgrey;
       font-size: 15px;
       font-size: 0.9375em;
       font-weight: 600;

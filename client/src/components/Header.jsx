@@ -1,16 +1,23 @@
 import React from 'react';
-import Navbar from './Navbar';
 import '../../src/App.css'
+import Navbar from './Navbar'
+import logo from './logo.svg'
+
 
 function Header()
 {
     return(
 
-        <header className="site-header">
-            <div>
-                <Navbar />
-            </div>
-        </header>
+        <div class="site-header">
+			<div class="container">
+				<a href="/" id="branding">
+					<img id="logo" src={logo} alt="Site Title"/>
+				</a>
+				<Navbar />
+				<div class="mobile-menu"></div>
+			</div>
+		</div>
+            
     )
 }
 

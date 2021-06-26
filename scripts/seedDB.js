@@ -5,20 +5,30 @@ const db = require("../models");
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/reactcms");
 
+
+
+
 const videoSeed = [
   {
-    title: "",
-    song: "Hello World",
-    srtist: "admin",
-    band: "",
-    genre: "",
-    year: "",
-    venue: "",
-    link: "", 
-    date: new Date(Date.now())
-  },
-  {
- 
+    
+    writer: "",
+    title: "admin",
+    description: "",
+    privacy: "",
+    filePath: "",
+    views: "",
+    duration: "", 
+    thumbnail: "",
+  
+  
+  }, 
+  
+  {timestamps: true}
+
+]
+
+
+
 
     
 

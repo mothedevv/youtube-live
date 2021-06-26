@@ -25,12 +25,22 @@ function searchByKeyword() {
 Authorization: Bearer [oauth2-token]
 Accept: application/json
 
+// grnrt
+GET https://youtube.googleapis.com/youtube/v3/videos?key=[YOUR_API_KEY] HTTP/1.1
+
+Authorization: Bearer [oauth2-token]
+Accept: application/json
 
 
+// https://www.googleapis.com/youtube/v3
 
 // Run the following commands to install the libraries using npm:
 // npm install googleapis --save
 // npm install google-auth-library --save
 
 
+// thumbnails
+
+thumbnails(
+snippet.thumbnails
 

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './bubblyButton.css';
 
-export default function BubblyButton() {
+export default function BubblyButton({ value, link }) {
 	const [animateClass, setAnimateClass] = useState('');
 	const animateButton = () => {
 		// e.preventDefault();
@@ -23,12 +24,13 @@ export default function BubblyButton() {
 	// };
 	return (
 		<div>
-			<button
+			<Link
 				onClick={() => animateButton()}
-				className={`bubbly-button ${animateClass}`}
+				className={`btn bubbly-button ${animateClass}`}
+				to={link}
 			>
-				Click me!
-			</button>
+				{value}
+			</Link>
 		</div>
 	);
 }

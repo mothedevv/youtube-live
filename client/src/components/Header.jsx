@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../src/App.css'
 import Navbar from './Navbar'
-import logo from './logo.svg'
+import logo from './logo.png'
 
 
 function Header()

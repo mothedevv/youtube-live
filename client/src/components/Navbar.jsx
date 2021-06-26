@@ -2,26 +2,8 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../App.css';
 
-<<<<<<< HEAD
-const Navbar = () => 
-{
-    return(
-        <nav className="main-navigation">
-            <button type="button" className="toggle-menu"><i className="fa fa-bars"></i></button>
-            <ul className="menu">
-                <li className="menu-item current-menu-item"><a href="index.html">Home</a></li>
-                <li className="menu-item"><a href="about.html">About</a></li>
-                <li className="menu-item"><a href="gallery.html">Gallery</a></li>
-                <li className="menu-item"><a href="download.html">Download</a></li>
-                <li className="menu-item"><a href="blog.html">Blog</a></li>
-                <li className="menu-item"><a href="contact.html">Contact</a></li>
-            </ul> 
-        </nav>
-    )
-=======
 const Navbar = () => {
 	const [currentPage, setCurrentPage] = useState('Home');
->>>>>>> 3b1d3704176bd34c308a126c44c8d5f06782e2c6
 
 	const handlePageChange = (page) => {
 		setCurrentPage(page);

@@ -1,0 +1,36 @@
+
+// search by keyword
+function searchByKeyword() {
+    var results = YouTube.Search.list('id,snippet', {q: 'dogs', maxResults: 25});
+    for(var i in results.items) {
+      var item = results.items[i];
+      Logger.log('[%s] Title: %s', item.id.videoId, item.snippet.title);
+    }
+  }
+
+  // search by topic
+  function searchByTopic() {
+    var mid = '/m/0gjf126';
+    var results = YouTube.Search.list('id,snippet', {topicId: mid, maxResults: 25});
+    for(var i in results.items) {
+      var item = results.items[i];
+      Logger.log('[%s] Title: %s', item.id.videoId, item.snippet.title);
+    }
+  }
+
+
+// HTTP Request for calling a list
+  GET https://youtube.googleapis.com/youtube/v3/videos?key=[YOUR_API_KEY] HTTP/1.1
+
+Authorization: Bearer [oauth2-token]
+Accept: application/json
+
+
+
+
+// Run the following commands to install the libraries using npm:
+// npm install googleapis --save
+// npm install google-auth-library --save
+
+
+

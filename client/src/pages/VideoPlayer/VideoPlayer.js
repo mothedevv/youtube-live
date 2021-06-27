@@ -5,10 +5,6 @@ function VideoPlayer()
 
 {
 
-  tag.id = 'iframe-demo';
-  tag.src = 'https://www.youtube.com/iframe_api';
-  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
   var player;
   function onYouTubeIframeAPIReady() {
   player = new player('existing-iframe-example', {

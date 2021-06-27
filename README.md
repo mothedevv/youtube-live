@@ -43,6 +43,9 @@ Attend live concerts right from the comfort of your own home.  Watch musical per
 
 [Bulma](https://bulma.io/)FrontEnd CSS framework
 
+[cors](/) Middleware
+[Passport](/) Authentication
+
 ## Installation
 
 What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.

@@ -5,8 +5,6 @@ import './bubblyButton.css';
 export default function BubblyButton({ value, link }) {
 	const [animateClass, setAnimateClass] = useState('');
 	const animateButton = () => {
-		// e.preventDefault();
-		//reset animation
 		setAnimateClass('');
 
 		setAnimateClass('animate');

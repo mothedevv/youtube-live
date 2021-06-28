@@ -1,8 +1,10 @@
-import axios from "axios";
+// import axios from "axios";
+// https://www.googleapis.com/youtube/v3/search
+// https://www.googleapis.com/youtube/v3/videos
 
 // export default {
 //   getVideo function (query) {
-//     return axios.get(https://www.googleapis.com/books/v1/volumes?q=${query}`);
+//     return axios.get(https://youtube.googleapis.com/youtube/v3/videos?key=[YOUR_API_KEY] HTTP/1.1);
 //   },
 //   // Deletes the video with the given id
 //   deleteVideo: function (id) {

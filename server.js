@@ -2,15 +2,11 @@ const express = require('express');
 const mongoose = require('mongoose');
 const routes = require('./routes');
 const cookieParser = require('cookie-parser');
-// const bodyParser = require("body-parser");
-// const { authMiddleware } = require('./utils/auth');
-// const cors = require("cors");
 
 
 
 const session = require('express-session');
 require('dotenv').config();
-
 
 
 const app = express();
@@ -36,12 +32,7 @@ app.use(
 );
 
 
-// app.use(
-// 	cors({
-// 	  origin: config.CLIENT_URL,
-// 	  credentials: true,
-// 	})
-//   );
+
 
 
 // Serve up static assets (usually on heroku)
@@ -49,8 +40,7 @@ if (process.env.NODE_ENV === 'production') {
 	app.use(express.static('client/build'));
 }
 
-// Add routes, both API and view
-// app.use(passport.initialize());
+// Add routes, both API and view// app.use(passport.initialize());
 app.use(routes);
 
 

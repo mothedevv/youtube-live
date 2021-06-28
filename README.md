@@ -29,6 +29,7 @@ Attend live concerts right from the comfort of your own home.  Watch your favori
 
 ## Technologies 
 
+
 [Trello](https://trello.com/) Agile Project Management with Scrum/Kanban Boards
 
 [Adobe Spark](https://spark.adobe.com/page/tRIlDi39DdX6h/) WireFrame/Mockup of UI/UX design.
@@ -39,16 +40,30 @@ Attend live concerts right from the comfort of your own home.  Watch your favori
 
 [ExpressJS](https://github.com/expressjs) Fast, unopinionated, minimalist web framework for node.
 
-[React-Bulma-Components](https://react-bulma.dev/en) React wrapper with Bulma Components
+This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
-[Bulma](https://bulma.io/) FrontEnd CSS framework
 
+[YouTube Data API v3](https://console.cloud.google.com/apis/library/youtube.googleapis.com?project=vaulted-channel-306702) HTTP request for Live Music Videos
+
+[SongKick API](https://www.songkick.com/developer) HTTP request for upcoming live concet events.
 
 ## Installation
+Fork or Clone this Repository
 
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+run `npx create-react-app`, 
+
+
+
+
+
+
 
 ## Usage 
+
+To use this App, please:
+Apply for a [SongKick](https://www.songkick.com/api_key_requests/new) 
+
+Request a [YouTube Data API v3](https://developers.google.com/youtube?hl=en) API key from Google Developer Console.
 
 
 
@@ -88,8 +103,13 @@ If you created an application or package and would like other developers to cont
 
 Go the extra mile and write tests for your application. Then provide examples on how to run them.
 
+
+
 ## License
 
+This application was created as a Final Group Project for `The Ohio State University's Full Stack Coding Bootcamp` and is not intended for commercial use. 
 
+This project is for educational purposes only and is not affiliated with [YouTube](https://developers.google.com/terms?hl=en) or [SongKick](https://www.songkick.com/developer/api-terms-of-use), and the [collaborators](#collaborators) have no plans to generate revenue with this application. 
 
-The last section of a good README is a license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, use [https://choosealicense.com/](https://choosealicense.com/)
+The content of this application is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For further details, see the Google [Developers Site Policies](https://developers.google.com/terms/site-policies). 
+

@@ -22,7 +22,6 @@ const App = () => {
 							<Route exact path="/login" component={Login} />
 							<Route exact path="/features" component={Features} />
 						</Switch>
-
 					</div>
 					{/* <Footer /> */}
 				

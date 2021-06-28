@@ -7,7 +7,7 @@ Great Live Music. Period.
 
 ## Description 
 
-Attend live concerts right from the comfort of your own home.  Watch musical performances from your favorite artists in concert venues all around the world. Discover rare intimate peformances and historic sold out shows. (add more...)
+Attend live concerts right from the comfort of your own home.  Watch your favorite artists perform in concert venues from all around the world. Discover rare intimate peformances and historic sold out shows. Listen to music the way its always been intended. Live! (add more...)
 
 
 ## Table of Contents
@@ -33,7 +33,7 @@ Attend live concerts right from the comfort of your own home.  Watch musical per
 
 [Adobe Spark](https://spark.adobe.com/page/tRIlDi39DdX6h/) WireFrame/Mockup of UI/UX design.
 
-[ReactJS](https://github.com/facebook/react)A declarative, efficient, and flexible JavaScript library for building user interfaces.
+[ReactJS](https://github.com/facebook/react) A declarative, efficient, and flexible JavaScript library for building user interfaces.
 
 [NodeJS](https://github.com/nodejs/node) open-source, cross-platform, JavaScript runtime environment.
 
@@ -41,10 +41,8 @@ Attend live concerts right from the comfort of your own home.  Watch musical per
 
 [React-Bulma-Components](https://react-bulma.dev/en) React wrapper with Bulma Components
 
-[Bulma](https://bulma.io/)FrontEnd CSS framework
+[Bulma](https://bulma.io/) FrontEnd CSS framework
 
-[cors](/) Middleware
-[Passport](/) Authentication
 
 ## Installation
 

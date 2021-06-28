@@ -76,6 +76,14 @@ function LandingPage() {
 											<span>Login</span>
 										</a>
 									</span>
+									<span class="navbar-item">
+										<a class="button is-purple is-outlined" >
+											<span class="icon">
+												<i class="fas fa-user-plus"></i>
+											</span>
+											<span>Signup</span>
+										</a>
+									</span>
 								</div>
 							</div>
 						</div>

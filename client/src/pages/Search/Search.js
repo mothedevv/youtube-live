@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 // import YTSEARCH from 'youtube-api-search'; 
 import _ from 'lodash';
 // import VideoPlayer from './pages/videoPlayer';
 
 const YT_API_KEY = ""; 
 
-export default class Search extends Component {
+export default class Search extends React.Component {
 
   constructor(props) {
     super(props);
@@ -36,11 +36,10 @@ export default class Search extends Component {
         <div className="search">
           <input
           value={this.state.term} 
-          placeholder="Search here..." 
-          onChange={event => this.onInputChange(event.target.value)} />
+          placeholder="Search Live Music..." 
+          onChange={(event) => this.onInputChange(event.target.value)}}
+          />
         </div>
       );
     }
-
-
 }

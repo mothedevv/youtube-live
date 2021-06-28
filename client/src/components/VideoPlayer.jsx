@@ -1,9 +1,9 @@
-import React from "react";
+// import React from "react";
 
 
-function VideoPlayer() 
+// function VideoPlayer() 
 
-{
+// {
 
   // tag.id = 'iframe-demo';
   // tag.src = 'https://www.youtube.com/iframe_api';
@@ -51,17 +51,17 @@ function VideoPlayer()
   
 
 
-  return(
-    <iframe id="existing-iframe-example"
-     width="640" height="360"
-     src="https://www.youtube.com/embed/M7lc1UVf-VE?enablejsapi=1"
-     frameborder="0"
-     style="border: solid 4px #37474F"
-    ></iframe>
-  );
+//   return(
+//     <iframe id="existing-iframe-example"
+//      width="640" height="360"
+//      src="https://www.youtube.com/embed/M7lc1UVf-VE?enablejsapi=1"
+//      frameborder="0"
+//      style="border: solid 4px #37474F"
+//     ></iframe>
+//   );
   
-};
+// };
 
 
-export default VideoPlayer;
+// export default VideoPlayer;
 

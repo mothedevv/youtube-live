@@ -1,73 +1,107 @@
 import React, { useState } from 'react';
-import '../../../src/App.css';
-import BubblyButton from '../../components/BubblyButton';
+import '../../App.css';
+import logo from '../../images/logo.svg'
+import 'font-awesome/css/font-awesome.min.css';
+import { render } from "react-dom";
+import Carousel from "../../components/Carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+
+
 
 function LandingPage() {
-	const [buttons, setButton1] = useState([
-		{ value: 'Try it Out', link: '/login' },
-		{ value: 'Sign Up', link: '/signup' },
-	]);
-	// const [button2, setButton2] = useState(['Sign Up'])
+	
 
 	return (
-		<div className="hero">
-			<div className="slider">
-				<ul className="slides">
-					<li className="lazy-bg" data-background="dummy/slide-1.jpg">
-						<div className="container">
-							<h2 className="slide-title">Header goes here</h2>
-							<h3 className="slide-subtitle">Less important text goes here</h3>
-<<<<<<< Updated upstream
-							<p className="slide-desc">
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit.{' '}
-								<br></br>Fugiat aliquid minus nemo sed est.
-							</p>
-							{buttons.map((b) => (
-								<BubblyButton value={b.value} link={b.link} />
-							))}
-=======
-							<p className="slide-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br></br>Fugiat aliquid minus nemo sed est.</p>
-
-							{button1.map((b, index) => (<BubblyButton key ={index} value={b}/>))}
-							{button2.map((b, index) => (<BubblyButton key ={index} value={b}/>))}
-							
-							
->>>>>>> Stashed changes
+		
+		
+		<body>
+			<section class="hero is-info is-fullheight">
+				<div class="hero-head">
+					<nav class="navbar">
+						<div class="container">
+							<div class="navbar-brand">
+								<span class="navbar-burger burger" data-target="navbarMenu">
+									<span></span>
+									<span></span>
+									<span></span>
+								</span>
+							</div>
+							<div id="navbarMenu" class="navbar-menu">
+								<div class="navbar-end">
+									<span class="navbar-item">
+										<a class="button is-white is-outlined">
+											<span class="icon">
+												<i class="fa fa-home"></i>
+											</span>
+											<span>Home</span>
+										</a>
+									</span>
+									<span class="navbar-item">
+										<a class="button is-white is-outlined">
+											<span class="icon">
+												<i class="fas fa-guitar"></i>
+											</span>
+											<span>Venues</span>
+										</a>
+									</span>
+									<span class="navbar-item">
+										<a class="button is-white is-outlined">
+											<span class="icon">
+												<i class="fas fa-music"></i>
+											</span>
+											<span>Artists</span>
+										</a>
+									</span>
+									<span class="navbar-item">
+										<a class="button is-white is-outlined" >
+											<span class="icon">
+												<i class="fas fa-user-friends"></i>
+											</span>
+											<span>Social</span>
+										</a>
+									</span>
+									<span class="navbar-item">
+										<a class="button is-white is-outlined" >
+											<span class="icon">
+												<i class="fas fa-question"></i>
+											</span>
+											<span>Try it out</span>
+										</a>
+									</span>
+									<span class="navbar-item">
+										<a class="button is-purple is-outlined" >
+											<span class="icon">
+												<i class="fas fa-sign-in-alt"></i>
+											</span>
+											<span>Login</span>
+										</a>
+									</span>
+								</div>
+							</div>
 						</div>
-					</li>
-					<li className="lazy-bg" data-background="dummy/slide-2.jpg">
-						<div className="container">
-							<h2 className="slide-title">Header goes here</h2>
-							<h3 className="slide-subtitle">Less important text goes here</h3>
-							<p className="slide-desc">
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit.{' '}
-								<br></br>Fugiat aliquid minus nemo sed est.
-							</p>
+					</nav>
+					</div>
 
-							{buttons.map((b) => (
-								<BubblyButton value={b.value} link={b.link} />
-							))}
+					<div class="hero-body">
+						<div class="container has-text-centered">
+							<div class="column is-6 is-offset-3">
+								<img src={logo}></img>
+								<h1 class="title">
+									YouTube.Live
+								</h1>
+								<h2 class="subtitle">Great Live Music . Period</h2>
+								<div>
+									<Carousel />
+								</div>
+							</div>
 						</div>
-					</li>
-					<li className="lazy-bg" data-background="dummy/slide-3.jpg">
-						<div className="container">
-							<h2 className="slide-title">Header goes here</h2>
-							<h3 className="slide-subtitle">Less important text goes here</h3>
-							<p className="slide-desc">
-								Lorem ipsuimport BubblyButton from
-								'../../components/BubblyButton'; m dolor sit amet, consectetur
-								adipisicing elit. <br></br>Fugiat aliquid minus nemo sed est.
-							</p>
+					</div>
 
-							{buttons.map((b) => (
-								<BubblyButton value={b.value} link={b.link} />
-							))}
-						</div>
-					</li>
-				</ul>
-			</div>
-		</div>
+			</section>
+    
+</body>
 	);
 }
 
+render(<LandingPage />, document.getElementById("root"));
 export default LandingPage;

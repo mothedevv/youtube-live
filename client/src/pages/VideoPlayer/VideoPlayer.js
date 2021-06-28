@@ -1,9 +1,10 @@
 import React from "react";
+import "../../../src/index.css";
 
 
 const VideoPlayer = ({ video }) => {
   if (!video) {
-    return <div>Loading Video Player...</div>;
+    return <div>Warming up...</div>;
   }
 const videoId = video.id.videoId;
 const url = `https://youtube.com/embed/${videoId}`;

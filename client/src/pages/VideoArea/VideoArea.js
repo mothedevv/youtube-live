@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import YTSearch from 'youtube-api-search';
 import _ from 'lodash';
-// import VideoPlayer from './components/VideoPlayer';
+
 // import NavBar from './components/NavBar';
-//import VideoResults from './components/VideoResults';
-//import SearchBox from './components/SearchBox';
+// import SearchBox from './components/SearchBox';
+// import VideoResults from './components/VideoResults';
+// import VideoPlayer from './components/VideoPlayer';
+
+import "../../../src/index.css";
 
 const YT_API_KEY = ""; 
 

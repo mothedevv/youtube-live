@@ -42,7 +42,7 @@ As a user, I want a channel to stream live music and find information about my f
 
 ## Business Context
 
-Musical Artists and Venue Owners would benefit grealtly from making Live Concert Events more accessible to wide audiences. Creating a channel to stream live music would provide a safer and more afforfable concert experience for viewers and generate more revenue for both parties. Audience would benefit from an app that allows them to stream live concerts in real-time and also discover previously recording music throughout history as well as provide them with information for ongoing concerts events and pandemic related updates while using the app.
+Musical Artists and Venue Owners would benefit grealtly from making Live Concert Events more accessible to wide audiences. Creating a channel to stream live music would provide a safer and more afforfable concert experience for viewers and generate more revenue for both parties. Audience would benefit from an app that allows them to stream live concerts in real-time and also discover previously recording music throughout history as well as provide them with detailed information on upcoming live concert events.
 ## Market Research:
 
 * About 47% of those surveyed agreed that the idea of going to a major public  event “will scare me for a long time,” per a study last month by Performance Research.

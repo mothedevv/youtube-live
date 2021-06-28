@@ -17,7 +17,9 @@ function LandingPage() {
 						<div className="container">
 							<h2 className="slide-title">Header goes here</h2>
 							<h3 className="slide-subtitle">Less important text goes here</h3>
-<<<<<<< Updated upstream
+
+    
+
 							<p className="slide-desc">
 								Lorem ipsum dolor sit amet, consectetur adipisicing elit.{' '}
 								<br></br>Fugiat aliquid minus nemo sed est.
@@ -25,14 +27,26 @@ function LandingPage() {
 							{buttons.map((b) => (
 								<BubblyButton value={b.value} link={b.link} />
 							))}
-=======
+
 							<p className="slide-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br></br>Fugiat aliquid minus nemo sed est.</p>
 
-							{button1.map((b, index) => (<BubblyButton key ={index} value={b}/>))}
-							{button2.map((b, index) => (<BubblyButton key ={index} value={b}/>))}
+							{button1.map((b, index) => (<BubblyButton key={index} value={b}/>))}
+							{button2.map((b, index) => (<BubblyButton key={index} value={b}/>))}
 							
 							
->>>>>>> Stashed changes
+
+
+
+
+							<p className="slide-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br></br>Fugiat aliquid minus nemo sed est.</p>
+
+							{button1.map((b, index) => (<BubblyButton key={index} value={b} />))}
+							{button2.map((b, index) => (<BubblyButton key={index} value={b} />))}
+
+
+
+
+
 						</div>
 					</li>
 					<li className="lazy-bg" data-background="dummy/slide-2.jpg">
@@ -67,7 +81,10 @@ function LandingPage() {
 				</ul>
 			</div>
 		</div>
-	);
-}
+
+	)
+
+
+};
 
 export default LandingPage;

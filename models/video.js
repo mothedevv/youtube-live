@@ -1,58 +1,41 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-const videoSchema = new Schema({
-   
-    
-    song: {
-        type: Schema.Types.ObjectId,
-        ref: "User"
-    },
-    
-            title: {
-                type: String,
-                maxlength: 50,
-            },
-            artist: {
-                type: String,
-                
-            },
-            description: {
-                type: Number,
-            },
-            genre: {
-                type: Number,
-            },
-            category: {
-                type: Number,
-            },
 
-            year: {
+const videoSchema = new mongoose.Schema({
+            id: {
+            type:Schema.Types.ObjectId,
+            ref: 'video'
+        },
+        views: {
+            type:String,
+        },
+        title: {
             type: Number,
-            
-            },
-
-            duration: {
-                type: Numb
-            
-            },
-            views: {
-                type: Number,
-
-            },
-            duration: {
-                type: String
-            },
-            thumbnail: {
-                type: String
-            }
+            maxlength: 50,
+        },
+        description: {
+            type: String,
+        },
         
- },         { timestamps: true })
-
-
-const Video = mongoose.model("Video", videoSchema);
-
-module.exports = { Video }
-
+        catogory: { 
+            type:String,
+        },
+        duration: {
+            type: Number,
+             default: 0, 
+        },
+        videoLink:{
+            type: String
+        },
+        thumbnail: {
+            type: String
+        }
+    }, { timestamps: true })
+    
+    
+    const Video = mongoose.model('Video', videoSchema);
+    
+    module.exports = { Video }
 
 
 

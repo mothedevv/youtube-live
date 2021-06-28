@@ -7,7 +7,7 @@ Great Live Music. Period.
 
 ## Description 
 
-Attend live concerts right from the comfort of your own home.  Watch your favorite artists perform in concert venues from all around the world. Discover rare intimate peformances and historic sold out shows. Listen to music the way its always been intended. Live! (add more...)
+Attend live concerts right from the comfort of your own home.  Watch your favorite musical artists and legendary rock bands perform in concert venues from all around the globe. Discover rare intimate peformances and historic sold out shows. Stream live (add more...)
 
 
 ## Table of Contents
@@ -89,5 +89,7 @@ If you created an application or package and would like other developers to cont
 Go the extra mile and write tests for your application. Then provide examples on how to run them.
 
 ## License
+
+
 
 The last section of a good README is a license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, use [https://choosealicense.com/](https://choosealicense.com/)

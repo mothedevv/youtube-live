@@ -1,6 +1,17 @@
 import React from "react";
 
 
+
+const VideoPlayer = {{ video }} => {
+  if (!video){
+    return <div>Loading Video Player...</div>
+
+
+
+const videoId = video.id.videoId;
+const url  }
+
+
 function VideoPlayer() 
 
 {
@@ -43,8 +54,18 @@ function VideoPlayer()
     changeBorderColor(event.data);
   }
 
-  
 
+
+
+// different embedded players
+
+
+  return(
+<iframe id="player" type="text/html" width="640" height="390"
+  src="http://www.youtube.com/embed/M7lc1UVf-VE?enablejsapi=1&origin=http://example.com"
+  frameborder="0">
+</iframe>  
+  );
 
   return(
   
@@ -63,13 +84,6 @@ function VideoPlayer()
       frameborder="0" allowfullscreen>
      </iframe>
   )
-
-
-
-
-
-
-
 
 };
 

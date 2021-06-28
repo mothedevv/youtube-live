@@ -17,9 +17,10 @@ exports.getVideos = asyncHandler(async (req, res, next) => {
 exports.getVideo = asyncHandler(async (req, res, next) => {
     const video = await Video.findById(req.params.id)
       .populate({
-        path: 'categoryId'
+        path: 'categoryId',
+        
       })
-      .populate({ path: 'userId', select: 'channelName subscribers photoUrl' })
+      .populate({ path: 'videoId', select: 'videoName' })
    
     if (!video) {
       return next(new ErrorResponse(`No video with that id of ${req.params.id}`))

@@ -9,9 +9,6 @@ const videoSchema = new mongoose.Schema({
         views: {
             type:String,
         },
-        createdAt: {
-            type: String,
-        },
         title: {
             type: Number,
             maxlength: 50,

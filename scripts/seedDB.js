@@ -25,7 +25,6 @@ const videoSeed = [
     
     id: "",
     views: "",
-    createdAt: "",
     title: "Live Music Show",
     description: "",
     category: "",

@@ -44,3 +44,72 @@ Accept: application/json
 thumbnails(
 snippet.thumbnails
 
+
+
+
+
+//Your application should implement this function if you want to automatically execute certain operations, such as playing the video or 
+displaying information about the video, as soon as the player is ready.
+function onPlayerReady(event) {
+  var embedCode = event.target.getVideoEmbedCode();
+  event.target.playVideo();
+  if (document.getElementById('embed-code')) {
+    document.getElementById('embed-code').innerHTML = embedCode;
+  }
+}
+
+
+//playing a new video player
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player('player', {
+    height: '390',
+    width: '640',
+    videoId: 'M7lc1UVf-VE',
+    playerVars: {
+      'playsinline': 1
+    },
+    events: {
+      'onReady': onPlayerReady,
+      'onStateChange': onPlayerStateChange
+    }
+  });
+}
+
+//queing functions allow you to load and play a video
+loadVideoById({'videoId': 'bHQqvYy5KYo',
+               'startSeconds': 5,
+               'endSeconds': 60});
+
+player.loadVideoById({videoId:String,
+startSeconds:Number,
+endSeconds:Number}):Void
+
+
+The required mediaContentUrl parameter specifies a fully qualified YouTube player URL in the format http://www.youtube.com/v/VIDEO_ID?version=3.
+player.loadVideoByUrl({mediaContentUrl:String,
+                       startSeconds:Number,
+                       endSeconds:Number}):Void
+
+
+ https://developers.google.com/apis-explorer/#p/youtube/v3/youtube.search.list?
+        part=snippet
+        &chart=mostPopular
+        &regionCode=es
+        &videoCategoryId=17
+
+
+        Music category:
+
+         {
+      "kind": "youtube#videoCategory",
+      "etag": "qnpwjh5QlWM5hrnZCvHisquztC4",
+      "id": "10",
+      "snippet": {
+        "title": "Music",
+        "assignable": true,
+        "channelId": "UCBR8-60-B28hp2BmDPdntcQ"
+      }
+
+      Search videos: 
+      EventType: live, completed, upcoming

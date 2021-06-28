@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-const YOUTUBE_API_KEY = "AIzaSyBWjCRjlWlbBEjBbEcXSLFNNylby-2hdLk"; 
+const YOUTUBE_API_KEY = ""; 
 
 class Search extends Component {
 

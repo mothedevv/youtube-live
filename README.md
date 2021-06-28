@@ -14,7 +14,7 @@ Find/Search/Stream (add more...)
 
 The is application is deployed on Heroku: [YouTube.Live](/)
 
-URL to GitHub Repository: 
+URL to GitHub Repository: [YouTube.Live Repo](https://github.com/moagermo/youtube-live)
 
 
 ## Table of Contents
@@ -42,10 +42,12 @@ As a user, I want a channel to stream live music and find information about my f
 
 ## Business Context
 
-Musical Artists and Venue Owners would benefit grealtly from making Live Concert Events more accessible to wide audiences. Creating a channel to stream live music would provide a safer and more afforfable concert experience for viewers and generate more revenue for both parties. Audience would benefit from an app that allows them to stream live concerts in real-time and also discover previously recording music throughout history as well as provide them with detailed information on upcoming live concert events.
+Musical Artists and Venue Owners would benefit grealtly from making Live Concert Events more accessible to wide audiences. Creating a channel to stream live music would provide a safer and more affordable concert experience for audiences and generate more revenue for both parties. Audiences would benefit from the convenience and flexibiliy of streaming live music from the comfort of their own home.
+
+
 ## Market Research:
 
-* About 47% of those surveyed agreed that the idea of going to a major public  event “will scare me for a long time,” per a study last month by Performance Research.
+   * About 47% of those surveyed agreed that the idea of going to a major public  event “will scare me for a long time,” per a study last month by Performance Research.
      - [Variety](https://variety.com/2020/digital/news/post-pandemic-streaming-tv-increase-1234589195/)
     * The concert and events industry has been among the hardest hit by Covid-19. Losses in the United States amounted to more than $26.1 billion in 2020.
      - [Los Angeles Business Journal](https://labusinessjournal.com/news/2021/mar/01/are-virtual-concerts-future-live-entertainment/)
@@ -94,7 +96,7 @@ When you run `npx create-react-app`, it always creates the project with the late
 
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser. The page will reload if you make edits. You will also see any lint errors in the console.
 
-Please see the following guide find some information on how to perform common tasks when using [create-react-app](client/README.md)
+Please see the following guide for more information on using [create-react-app](client/README.md)
 
 ## Usage 
 
@@ -109,7 +111,7 @@ This application is deployed on Heroku: [YouTube.Live](/)
 
 ## Test
 
-To test this application, visit the deployed application on Herko: 
+To test this application, visit the deployed application on Heroku: 
 
 There are two options for testing:
 
@@ -123,8 +125,6 @@ There are two options for testing:
 User Name: testuser@fakemail.com
 Password: testlive123
 ```
-
-
 
 ## Collaborators
 

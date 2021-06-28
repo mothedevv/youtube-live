@@ -24,6 +24,13 @@ function LandingPage() {
 							{buttons.map((b) => (
 								<BubblyButton value={b.value} link={b.link} />
 							))}
+							<p className="slide-desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+							<br></br>Fugiat aliquid minus nemo sed est.</p>
+							{button1.map((b, index) => 
+							(<BubblyButton key ={index} value={b}/>))}
+
+							{button2.map((b, index) => 
+							(<BubblyButton key ={index} value={b}/>))}
 						</div>
 					</li>
 					<li className="lazy-bg" data-background="dummy/slide-2.jpg">

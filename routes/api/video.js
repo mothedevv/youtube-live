@@ -1,7 +1,7 @@
 // const express = require('express');
 // const router = require("express").Router();
 // const videoController = reqiure("../..controllers/video")
-const { video } = require("../../../models/video");
+const { video } = require("../../models/video");
 // //videoController = require("../../controllers/videoController");
 // const router = express.Router();
 const express = require('express')

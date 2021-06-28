@@ -2,29 +2,32 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const videoSchema = new mongoose.Schema({
-        writer: {
+            id: {
             type:Schema.Types.ObjectId,
-            ref: 'User'
+            ref: 'video'
+        },
+        views: {
+            type:String,
+        },
+        createdAt: {
+            type: String,
         },
         title: {
-            type:String,
-            maxlength:50,
+            type: Number,
+            maxlength: 50,
         },
         description: {
             type: String,
         },
-        privacy: {
+        
+        catogory: { 
+            type:String,
+        },
+        duration: {
             type: Number,
+             default: 0, 
         },
-        filePath : {
-            type: String,
-        },
-        catogory: String,
-        views : {
-            type: Number,
-            default: 0 
-        },
-        duration :{
+        videoLink:{
             type: String
         },
         thumbnail: {

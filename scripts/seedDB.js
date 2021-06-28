@@ -23,13 +23,14 @@ mongoose.connect(
 const videoSeed = [
   {
     
-    writer: "",
-    title: "admin",
-    description: "",
-    privacy: "",
-    filePath: "",
+    id: "",
     views: "",
-    duration: "", 
+    createdAt: "",
+    title: "Live Music Show",
+    description: "",
+    category: "",
+    duration: "",
+    videoLink: "",
     thumbnail: "",
   
   

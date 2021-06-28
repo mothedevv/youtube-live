@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const userRoutes = require('./user');
 const postRoutes = require('./posts');
-const videoRoutes = require('./video');
+const videoRoutes = require('./youTube/video');
 
 // Post routes
 router.use('/posts', postRoutes);

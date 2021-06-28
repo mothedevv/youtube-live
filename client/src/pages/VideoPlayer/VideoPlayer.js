@@ -43,8 +43,11 @@ function VideoPlayer()
     changeBorderColor(event.data);
   }
 
+  
+
 
   return(
+  
     <iframe id="existing-iframe-example"
      width="640" height="360"
      src="https://www.youtube.com/embed/M7lc1UVf-VE?enablejsapi=1"
@@ -53,7 +56,29 @@ function VideoPlayer()
     ></iframe>
   );
   
+
+  return (
+    <iframe id="ytplayer" type="text/html" width="720" height="405"
+     src="https://www.youtube.com/embed/M7lc1UVf-VE"
+      frameborder="0" allowfullscreen>
+     </iframe>
+  )
+
+
+
+
+
+
+
+
 };
+
+
+
+
+
+
+
 
 
 export default VideoPlayer;

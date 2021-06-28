@@ -8,9 +8,10 @@ const extractVideoInfo = (video = false) => {
       createdAt: video.createdAt,
       title: video.title,
       description: video.description,
+      category: video.category,
       duration: video.duration,
       videoLink: generateLink({ filename: video.filename, type: "video" }),
-      thumbnailLink: generateLink({
+      thumbnail: generateLink({
         filename: video.thumbnailFilename,
         type: "thumbnail",
       }),

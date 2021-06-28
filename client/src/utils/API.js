@@ -9,7 +9,7 @@ import axios from "axios";
 //     return axios.delete("/api/video/" + id).then(result => result.data);
 //   },
 //   // Saves video to the database
-//   saveVideo: function (bookData) {
+//   saveVideo: function (videoData) {
 //     return axios.post("/api/video", videoData).then(result => result.data);
 //   },
 //   // Get the saved video from the database

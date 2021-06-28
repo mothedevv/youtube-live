@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
+// import YTSEARCH from 'youtube-api-search'; 
+import _ from 'lodash';
+// import VideoPlayer from './pages/videoPlayer';
 
-const YOUTUBE_API_KEY = ""; 
+const YT_API_KEY = ""; 
 
-class Search extends Component {
+export default class Search extends Component {
 
   constructor(props) {
     super(props);
@@ -13,31 +16,31 @@ class Search extends Component {
     };
 
     this.searchYouTube('');
-    this.videoSearch
+    
   }
+    videoSearch = _.debounce((term) => { this.searchYouTube(term) }, 300);  
 
-  render() {
-        return (
-          <div className="search">
-            <input
-            value={this.state.term} 
-            placeholder="Search here..." 
-            onChange={event => this.onInputChange(event.target.value)} />
-          </div>
-        );
-      }
 
-  videoSearch(term) {
-    Search({ key: YOUTUBE_API_KEY, term: term}, (videos) => {
-      this.setState({ 
-        videos: videos, 
-        selectedVideo: videos[0]
+    searchYouTube(term) {
+      YTSearch({ key: YT_API, term: term}, (videos) => {
+        this.setState({ 
+          videos: videos, 
+          selectedVideo: videos[0]
+        });
       });
-    });
-  }
+    }
+
+
+    render() {
+      return (
+        <div className="search">
+          <input
+          value={this.state.term} 
+          placeholder="Search here..." 
+          onChange={event => this.onInputChange(event.target.value)} />
+        </div>
+      );
+    }
+
 
 }
-
-
-
- export default Search;

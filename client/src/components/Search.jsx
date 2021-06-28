@@ -12,7 +12,7 @@ class Search extends Component {
       selectedVideo: null 
     };
 
-    this.videoSearch('');
+    this.searchYouTube('');
   }
 
   render() {

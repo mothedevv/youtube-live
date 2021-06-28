@@ -7,16 +7,22 @@ Great Live Music. Period.
 
 ## Description 
 
-Attend live concerts right from the comfort of your own home.  Watch your favorite musical artists and legendary rock bands perform in concert venues from all around the globe. Discover rare intimate peformances and historic sold out shows. Stream live (add more...)
+Attend live concerts right from the comfort of your own home.  Watch your favorite musical artists and legendary rock bands perform in concert venues from all around the globe. Discover rare intimate peformances and historic sold out shows. 
+
+Find/Search/Stream (add more...)
+
 
 The is application is deployed on Heroku: [YouTube.Live](/)
+
+URL to GitHub Repository: 
 
 
 ## Table of Contents
 * [User Story](#user-story)
 * [Business Context](#business-context)
-* [Features](#features)
-* [Technologies](#technologies)
+* [Current Features](#current-features)
+* [Future Development](#future-development)
+* [Technologies Used](#technologies-used)
 * [Installation](#installation)
 * [Usage](#usage)
 * [Tests](#Tests)
@@ -25,11 +31,15 @@ The is application is deployed on Heroku: [YouTube.Live](/)
 * [Acceptance Criteria](#acceptance_criteria)
 * [License](#license)
 
-## Features
+## Current Features
 
 --info/facts about artists and musical venues? Stories behind the music/
 --share/like/comment on videos and performances.
---Save/create your own library of live music.  
+--Save/create your own library of live music. 
+
+## Future Development
+
+The Stream live concerts in real-time (add more...)
 
 ## Technologies 
 
@@ -61,7 +71,7 @@ When you run `npx create-react-app`, it always creates the project with the late
 
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser. The page will reload if you make edits. You will also see any lint errors in the console.
 
-Please see, 
+Please see the following guide find some information on how to perform common tasks when using [create-react-app](client/README.md)
 
 ## Usage 
 
@@ -76,7 +86,21 @@ This application is deployed on Heroku: [YouTube.Live](/)
 
 ## Test
 
-To test this application, visit the deployed application on Herko://
+To test this application, visit the deployed application on Herko: 
+
+There are two options for testing:
+
+`Sign up` to create a new user account for testing.
+
+-OR-
+
+`Log in` to enter a user test credentials provided below.
+
+```
+User Name: testuser@fakemail.com
+Password: testlive123
+```
+
 
 
 ## Collaborators

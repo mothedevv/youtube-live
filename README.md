@@ -9,16 +9,20 @@ Great Live Music. Period.
 
 Attend live concerts right from the comfort of your own home.  Watch your favorite musical artists and legendary rock bands perform in concert venues from all around the globe. Discover rare intimate peformances and historic sold out shows. Stream live (add more...)
 
+The is application is deployed on Heroku: [YouTube.Live](/)
+
 
 ## Table of Contents
+* [User Story](#user-story)
+* [Business Context](#business-context)
 * [Features](#features)
 * [Technologies](#technologies)
 * [Installation](#installation)
 * [Usage](#usage)
+* [Tests](#Tests)
 * [Collaborators](#collaborators)
 * [Contributing](#contributing)
 * [Acceptance Criteria](#acceptance_criteria)
-* [Tests](#tests)
 * [License](#license)
 
 ## Features
@@ -43,28 +47,36 @@ Attend live concerts right from the comfort of your own home.  Watch your favori
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 
-[YouTube Data API v3](https://console.cloud.google.com/apis/library/youtube.googleapis.com?project=vaulted-channel-306702) HTTP request for Live Music Videos
+[YouTube Data API v3](https://console.cloud.google.com/apis/library/youtube.googleapis.com?project=vaulted-channel-306702) HTTP requests for Live Music Videos.
 
-[SongKick API](https://www.songkick.com/developer) HTTP request for upcoming live concet events.
+[SongKick API](https://www.songkick.com/developer) HTTP requests for information on live concert events, artists, and locations
 
 ## Installation
-Fork or Clone this Repository
 
-run `npx create-react-app`, 
+When you run `npx create-react-app`, it always creates the project with the latest version of `react-scripts` so you’ll get all the new features and improvements in newly created apps automatically.
 
+`Fork` or `Clone` this application to your local directoy. In the project directory, you can run:
 
+`npm start` to run the app in the development mode.
 
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser. The page will reload if you make edits. You will also see any lint errors in the console.
 
-
-
+Please see, 
 
 ## Usage 
 
 To use this App, please:
-Apply for a [SongKick](https://www.songkick.com/api_key_requests/new) 
+
+Apply for a [SongKick](https://www.songkick.com/api_key_requests/new) API key.
 
 Request a [YouTube Data API v3](https://developers.google.com/youtube?hl=en) API key from Google Developer Console.
 
+This application is deployed on Heroku: [YouTube.Live](/)
+
+
+## Test
+
+To test this application, visit the deployed application on Herko://
 
 
 ## Collaborators
@@ -74,6 +86,17 @@ Request a [YouTube Data API v3](https://developers.google.com/youtube?hl=en) API
 |![Anthony](/client/src/images/anthony.jpeg?raw=true "Anthony DeCapite")|[Anthony's Work](https://github.com/adecapite)|![Kyle](/client/src/images/kyle.jpeg?raw=true "Kyle Young")|[Kyle's Work](https://github.com/Youngin9210)
 |![Mo](/client/src/images/mo.png?raw=true "Mo Ager")|[Mo's Work](https://github.com/moagermo)|![Morgan](/client/src/images/morgan.png?raw=true "Morgan Schall")|[Morgan's Work](https://github.com/mschall217)|
 |![Ryan](/client/src/images/ryan.jpeg?raw=true "Ryan Evans")|[Ryan's Work](https://github.com/rdevans87)|
+
+## Contributing
+
+Please refer to the [Contributor Covenant](https://www.contributor-covenant.org/) for contribution guidelines.
+
+
+## Badges
+
+![badmath](https://img.shields.io/github/languages/top/nielsenjared/badmath)
+
+Badges aren't _necessary_, per se, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
 
 ## Acceptance Criteria
 
@@ -88,21 +111,6 @@ Request a [YouTube Data API v3](https://developers.google.com/youtube?hl=en) API
 * Must have folder structure that meets MVC Paradigm.
 * Must meet good quality coding standards (indentation, scoping, naming).
 * Must not expose sensitive API key information on the server.
-
-## Badges
-
-![badmath](https://img.shields.io/github/languages/top/nielsenjared/badmath)
-
-Badges aren't _necessary_, per se, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
-
-## Contributing
-
-If you created an application or package and would like other developers to contribute it, you will want to add guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own.
-
-## Tests
-
-Go the extra mile and write tests for your application. Then provide examples on how to run them.
-
 
 
 ## License

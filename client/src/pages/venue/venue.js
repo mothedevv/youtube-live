@@ -1,9 +1,13 @@
 import React from "react";
-
-function Artists(){
+import Navbar from "../../components/Navbar";
+import Card from "../../components/card";
+import Footer from "../../components/Footer";
+function Venue(){
     return (
         <div>
-            
+            <Navbar />
+            <Card />
+            <Footer />
         </div>
     )
 }

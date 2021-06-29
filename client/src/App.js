@@ -15,7 +15,7 @@ const App = () => {
 				<div>
 					<Header />
 					{/* <ArtistPic /> */}
-					<div className="container">
+					<div className="">
 						<Switch>
 							<Route exact path="/" component={LandingPage} />
 							<Route exact path="/signup" component={SignUp} />
@@ -24,7 +24,6 @@ const App = () => {
 						</Switch>
 					</div>
 					{/* <Footer /> */}
-
 				</div>
 			</UserProvider>
 		</Router>

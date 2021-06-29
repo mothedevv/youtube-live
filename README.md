@@ -36,25 +36,28 @@ URL to GitHub Repository: [YouTube.Live Repo](https://github.com/moagermo/youtub
 ## User Story
 
 ```
-As a user, I want a channel to stream live music and find information about my favorite artists. When I visit the site, I can search for upcoming concert events and locations, and watch recommended videos based on different categories
+As a user, I want a channel to stream live music and find information about my favorite artists. When I visit the site, I can search for upcoming concert events and locations, and watch recommended videos based on different categories.
 
 ```
 
 ## Business Context
 
-Musical Artists and Venue Owners would benefit grealtly from making Live Concert Events more accessible to wide audiences. Creating a channel to stream live music would provide a safer and more affordable concert experience for audiences and generate more revenue for both parties. Audiences would benefit from the convenience and flexibiliy of streaming live music from the comfort of their own home.
+Musical Artists and Venue Owners would benefit grealtly from making Live Concert Events more accessible to wide audiences. Creating a channel to stream live music would provide a safer and more affordable concert experience for audiences and generate more revenue for both parties. Audiences would benefit from the convenience and flexibiliy of streaming live music from the comfort of their own home while venue owners wouldn't have to worry about overcrowded ampitheaters.
 
 
 ## Market Research:
 
    * About 47% of those surveyed agreed that the idea of going to a major public  event “will scare me for a long time,” per a study last month by Performance Research.
-     - [Variety](https://variety.com/2020/digital/news/post-pandemic-streaming-tv-increase-1234589195/)
+    - [Variety](https://variety.com/2020/digital/news/post-pandemic-streaming-tv-increase-1234589195/)
+    
     * The concert and events industry has been among the hardest hit by Covid-19. Losses in the United States amounted to more than $26.1 billion in 2020.
      - [Los Angeles Business Journal](https://labusinessjournal.com/news/2021/mar/01/are-virtual-concerts-future-live-entertainment/)
+    
     * 60% of fans surveyed said they planned to continue watching live streams, even once venues reopen. 
      - [BroadWay World](https://www.broadwayworld.com/bwwmusic/article/Bandsintown-Finds-Unique-Insights-into-Music-Live-Streaming-with-Fan-and-Artist-Surveys-20200824)
+
     * 67% of live video viewers are more likely to buy a ticket to a concert or event after watching a live video of that event or a similar one. 
-    - [Amp Live](/)
+    - [Amp Live](https://www.amplivemusic.com/)
  
 ## Current Features
 
@@ -81,6 +84,7 @@ The Stream live concerts in real-time (add more...)
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
+[youtube-api-search](https://www.npmjs.com/package/youtube-api-search)
 
 [YouTube Data API v3](https://console.cloud.google.com/apis/library/youtube.googleapis.com?project=vaulted-channel-306702) HTTP requests for Live Music Videos.
 
@@ -141,6 +145,7 @@ Please refer to the [Contributor Covenant](https://www.contributor-covenant.org/
 
 ## Badges
 
+![badtmath](https://img.shields.io/badge/React-YouTube.live-blue)
 ![badmath](https://img.shields.io/github/languages/top/nielsenjared/badmath)
 
 Badges aren't _necessary_, per se, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.

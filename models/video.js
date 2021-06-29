@@ -17,7 +17,7 @@ const videoSchema = new mongoose.Schema({
             type: String,
         },
         
-        catogory: { 
+        category: { 
             type:String,
         },
         duration: {

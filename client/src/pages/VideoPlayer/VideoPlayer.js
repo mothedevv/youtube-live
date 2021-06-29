@@ -12,7 +12,7 @@ const url = `https://youtube.com/embed/${videoId}`;
 return (
   <div className="video-detail col-md-8" id="player">
  <div className="embed-responsive embed responsive=16by9">
-   <iframe className="embed-responsive-item" src={url}></iframe>
+   <iframe className="embed-responsive-item" src={url} title="video-player"></iframe>
  </div>
  <div className="details">
    <div>{video.snippet.title}</div>

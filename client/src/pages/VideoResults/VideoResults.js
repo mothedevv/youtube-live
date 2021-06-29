@@ -6,7 +6,7 @@ const VideoResults = ({videos, onVideoSelect}) => {
     if (!videos) {
     return <div>Warming Up</div>
     }
-    const videoItems = video.map((video) => {
+    const videoItems = videos.map((video) => {
     return(
     <VideoItem
     onVideoSelect={onVideoSelect}

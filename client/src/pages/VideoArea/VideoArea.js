@@ -2,14 +2,16 @@ import React, { Component } from 'react';
 import YTSearch from 'youtube-api-search';
 import _ from 'lodash';
 
-// import NavBar from './components/NavBar';
-// import SearchBox from './components/SearchBox';
-// import VideoResults from './components/VideoResults';
-// import VideoPlayer from './components/VideoPlayer';
+// import NavBar from '../NavBar/NavBar';
+
+import SearchBox from '../SearchBox/SearchBox';
+import VideoPlayer from '../VideoPlayer/VideoPlayer';
+import VideoResults from '../VideoResults/VideoResults';
+
 
 import "../../../src/index.css";
 
-const YT_API_KEY = ""; 
+const YT_API = ""; 
 
 class VideoArea extends Component {
 constructor(props) {
@@ -26,7 +28,7 @@ constructor(props) {
     videoSearch = _.debounce((term) => { this.searchYouTube(term) }, 300);  
 
     searchYouTube(term) {
-        YTSearch({ key: YT_API_KEY, term: term}, (videos) => {
+        YTSearch({ key: YT_API, term: term}, (videos) => {
           this.setState({ 
             videos: videos, 
             selectedVideo: videos[0]

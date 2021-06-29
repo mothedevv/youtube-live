@@ -1,0 +1,11 @@
+*{
+    color: black;
+}
+
+.hero.is-info
+{
+    background-color:turquoise;
+    background-size: contain;
+    ;
+}
+

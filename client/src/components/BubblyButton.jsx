@@ -14,13 +14,7 @@ export default function BubblyButton({ value, link }) {
 		}, 1000);
 	};
 
-	// const addAnimation = (e) => {
-	// 	e.preventDefault();
-	// 	e.target.classList.add('animate');
-	// 	setTimeout(function () {
-	// 		e.target.classList.remove('animate');
-	// 	}, 700);
-	// };
+	
 	return (
 		<div>
 			<Link

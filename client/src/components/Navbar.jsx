@@ -1,5 +1,7 @@
 import React from 'react';
-import '../App.css';
+import '../pages/landingPage/style.css';
+import 'bulma/css/bulma.min.css';
+
 
 
 function Navbar(){

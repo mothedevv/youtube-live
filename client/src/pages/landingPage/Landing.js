@@ -6,7 +6,6 @@ import 'font-awesome/css/font-awesome.min.css';
 import { render } from "react-dom";
 import Carousel from "../../components/Carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import Navbar from '../../components/Navbar';
 
 
 function LandingPage() {

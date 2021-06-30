@@ -8,8 +8,6 @@ function callApi(){
 
     console.log(songAPI);
 
-
-    
     fetch(songAPI)
     .then(response => {
         return response.json();

@@ -1,84 +1,110 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import '../App.css';
+const ReactCSSTransitionGroup = React.addons.CSSTransitionGroup;
 
-
-function Profilenavbar(){
-	
-
-	return (
-		<nav class="navbar">
-						<div class="container">
-							<div class="navbar-brand">
-								<span class="navbar-burger burger" data-target="navbarMenu">
-									<span></span>
-									<span></span>
-									<span></span>
-								</span>
-							</div>
-							<div id="navbarMenu" class="navbar-menu">
-								<div class="navbar-end">
-									<span class="navbar-item">
-										<a class="button is-white is-outlined">
-											<span class="icon">
-												<i class="fa fa-home"></i>
-											</span>
-											<span>Home</span>
-										</a>
-									</span>
-									<span class="navbar-item">
-										<a class="button is-white is-outlined">
-											<span class="icon">
-												<i class="fas fa-guitar"></i>
-											</span>
-											<span>Venues</span>
-										</a>
-									</span>
-									<span class="navbar-item">
-										<a class="button is-white is-outlined">
-											<span class="icon">
-												<i class="fas fa-music"></i>
-											</span>
-											<span>Artists</span>
-										</a>
-									</span>
-									<span class="navbar-item">
-										<a class="button is-white is-outlined" >
-											<span class="icon">
-												<i class="fas fa-user-friends"></i>
-											</span>
-											<span>Social</span>
-										</a>
-									</span>
-									<span class="navbar-item">
-										<a class="button is-white is-outlined" >
-											<span class="icon">
-												<i class="fas fa-question"></i>
-											</span>
-											<span>Try it out</span>
-										</a>
-									</span>
-									<span class="navbar-item">
-										<a class="button is-purple is-outlined" >
-											<span class="icon">
-												<i class="fas fa-sign-in-alt"></i>
-											</span>
-											<span>Login</span>
-										</a>
-									</span>
-									<span class="navbar-item">
-										<a class="button is-purple is-outlined" >
-											<span class="icon">
-												<i class="fas fa-user-plus"></i>
-											</span>
-											<span>Signup</span>
-										</a>
-									</span>
-								</div>
-							</div>
-						</div>
-					</nav>
-	);
+const Tab = (props) => {
+  
+  const { name } = props.tab;
+  const { activeTab, changeActiveTab } = props;
+  
+  return (
+    <li className={name === activeTab && "is-active"} onClick={() => changeActiveTab(name)}>
+      <a>
+        { /* <span className="icon is-small"><i className="fa fa-image"></i></span> */ }
+        <span>{name}</span>
+      </a>
+    </li>
+  );
 };
 
-export default Profilenavbar;
+class Tabs extends React.Component { 
+  static propTypes = {
+    tabList: React.PropTypes.array.isRequired,
+    activeTab: React.PropTypes.string,
+    changeActiveTab: React.PropTypes.func
+  };
+  
+  render() {
+    return (
+      <div className="tabs">
+        <ul>
+          { this.props.tabList.map(tab => 
+              <Tab  tab={tab}
+                    key={tab.name}
+                    activeTab={this.props.activeTab}
+                    changeActiveTab={this.props.changeActiveTab}
+              />
+           )}
+        </ul>
+      </div>
+    );
+  }
+}
+
+const ActiveTabContent = (props) => <div>{props.content}</div>;
+
+const tabList = [
+  {
+    name: "My Playlists",
+    icon: "",
+    content: <Card />
+  }, {
+    name: "My Venues",
+    icon: "",
+    content: <Card />
+  }, {
+    name: "My Artists",
+    icon: "",
+    content: <Card />
+  }, {
+    name: "What's New?",
+    icon: "",
+    content: <Card />
+  }
+];
+
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    
+    this.state = {
+      activeTab: "Pictures"
+    };
+  }
+
+  changeActiveTab(tab) {
+    this.setState({ activeTab: tab });
+  }
+  
+  activeTabContent() {
+    const activeIndex = tabList.findIndex((tab) => {
+      return tab.name === this.state.activeTab;
+    });
+    
+    return tabList[activeIndex].content;
+  }
+  
+  render() {    
+    return (
+      <section className="section">
+        <div className="container">
+          <Tabs tabList={tabList}
+                activeTab={this.state.activeTab}
+                changeActiveTab={this.changeActiveTab.bind(this)}
+           />
+          
+            <ReactCSSTransitionGroup
+              className="tabs-content"
+              component="div"
+              transitionName="fade"
+              transitionEnterTimeout={0}
+              transitionLeaveTimeout={150}
+            >
+              <ActiveTabContent key={this.state.activeTab} content={this.activeTabContent()} />
+            </ReactCSSTransitionGroup>
+          
+        </div>
+      </section>
+    );
+  }
+}
+
+ReactDOM.render(<App />, document.getElementById("root"));

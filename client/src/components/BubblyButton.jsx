@@ -6,8 +6,6 @@ export default function BubblyButton({ value, link }) {
 	const [animateClass, setAnimateClass] = useState('');
 	const animateButton = () => {
 
-=======
-
 		setAnimateClass('');
 
 		setAnimateClass('animate');

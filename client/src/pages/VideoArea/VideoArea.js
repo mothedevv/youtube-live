@@ -19,7 +19,7 @@ constructor(props) {
 
     this.state = { 
       videos: [],
-      selectedVideo: null 
+      selectedVideo: null
     };
 
     this.searchYouTube('');
@@ -40,14 +40,14 @@ constructor(props) {
     render() {
         return (
             <div>
-                <Navbar/>
             <div className="container">
                 <SearchBox
                  onChange={(searchTerm) => {this.videoSearch(searchTerm)}} />
                 <VideoPlayer video={this.state.selectedVideo} />
                 <VideoResults
                 onVideoSelect={(selectedVideo) => {this.setState({selectedVideo})}}
-                video={this.state.videos} />
+                video={this.state.videos} 
+                />
             </div>
             </div>
           );

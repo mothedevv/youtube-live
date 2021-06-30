@@ -1,9 +1,15 @@
 import React from "react";
+import Venue from './nationwide.jpeg'
 
-function Artists(){
+function Venues(){
     return (
         <div>
+          <div class="container">
+              
+          </div>
             
-        </div>
+        </div>    
     )
 }
+
+export default Venues;

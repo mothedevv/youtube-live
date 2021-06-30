@@ -1,95 +1,82 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
 import '../App.css';
 
-const Navbar = () => {
-	const [currentPage, setCurrentPage] = useState('Home');
 
-	const handlePageChange = (page) => {
-		setCurrentPage(page);
-	};
+function Navbar(){
+	
 
 	return (
-		<nav className="main-navigation">
-			<button type="button" className="toggle-menu">
-				<i className="fa fa-bars"></i>
-			</button>
-			<ul className="menu">
-				<li
-					className={
-						currentPage !== 'Home' ? 'menu-item' : 'menu-item current-menu-item'
-					}
-				>
-					<Link to="/" onClick={() => handlePageChange('Home')}>
-						Home
-					</Link>
-				</li>
-				<li
-					className={
-						currentPage !== 'About'
-							? 'menu-item'
-							: 'menu-item current-menu-item'
-					}
-				>
-					<Link to="/about" onClick={() => handlePageChange('About')}>
-						About
-					</Link>
-				</li>
-				<li
-					className={
-						currentPage !== 'Gallery'
-							? 'menu-item'
-							: 'menu-item current-menu-item'
-					}
-				>
-					<Link to="/gallery" onClick={() => handlePageChange('Gallery')}>
-						Gallery
-					</Link>
-				</li>
-				<li
-					className={
-						currentPage !== 'Download'
-							? 'menu-item'
-							: 'menu-item current-menu-item'
-					}
-				>
-					<Link to="/download" onClick={() => handlePageChange('Download')}>
-						Download
-					</Link>
-				</li>
-				<li
-					className={
-						currentPage !== 'Blog' ? 'menu-item' : 'menu-item current-menu-item'
-					}
-				>
-					<Link to="/blog" onClick={() => handlePageChange('Blog')}>
-						Blog
-					</Link>
-				</li>
-				<li
-					className={
-						currentPage !== 'Contact'
-							? 'menu-item'
-							: 'menu-item current-menu-item'
-					}
-				>
-					<Link to="/contact" onClick={() => handlePageChange('Contact')}>
-						Contact
-					</Link>
-				</li>
-				<li
-					className={
-						currentPage !== 'Login'
-							? 'menu-item'
-							: 'menu-item current-menu-item'
-					}
-				>
-					<Link to="/login" onClick={() => handlePageChange('Login')}>
-						Login
-					</Link>
-				</li>
-			</ul>
-		</nav>
+		<nav className="navbar">
+						<div className="container">
+							<div className="navbar-brand">
+								<span className="navbar-burger burger" data-target="navbarMenu">
+									<span></span>
+									<span></span>
+									<span></span>
+								</span>
+							</div>
+							<div id="navbarMenu" className="navbar-menu">
+								<div className="navbar-end">
+									<span className="navbar-item">
+										<a  href="/" className="button is-white is-outlined">
+											<span className="icon">
+												<i className="fa fa-home"></i>
+											</span>
+											<span>Home</span>
+										</a>
+									</span>
+									<span className="navbar-item">
+										<a  href="/" className="button is-white is-outlined">
+											<span className="icon">
+												<i className="fas fa-guitar"></i>
+											</span>
+											<span>Venues</span>
+										</a>
+									</span>
+									<span className="navbar-item">
+										<a  href="/" className="button is-white is-outlined">
+											<span className="icon">
+												<i className="fas fa-music"></i>
+											</span>
+											<span>Artists</span>
+										</a>
+									</span>
+									<span className="navbar-item">
+										<a  href="/" className="button is-white is-outlined" >
+											<span className="icon">
+												<i className="fas fa-user-friends"></i>
+											</span>
+											<span>Social</span>
+										</a>
+									</span>
+									<span className="navbar-item">
+										<a  href="/" className="button is-white is-outlined" >
+											<span className="icon">
+												<i className="fas fa-question"></i>
+											</span>
+											<span>Try it out</span>
+										</a>
+									</span>
+									<span className="navbar-item">
+										<a  href="/" className="button is-purple is-outlined" >
+											<span className="icon">
+												<i className="fas fa-sign-in-alt"></i>
+											</span>
+											<span>Login</span>
+										</a>
+									</span>
+									<span className="navbar-item">
+										<a  href="/" className="button is-purple is-outlined" >
+											<span className="icon">
+												<i className="fas fa-user-plus"></i>
+											</span>
+											<span>Signup</span>
+										</a>
+									</span>
+								</div>
+							</div>
+						</div>
+					</nav>
 	);
 };
 

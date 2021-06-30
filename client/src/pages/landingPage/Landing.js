@@ -14,21 +14,20 @@ function LandingPage() {
 
 	return (
 		
-		
 		<body>
-			<section class="hero is-info is-fullheight">
-				<div class="hero-head">
-					<Navbar />
+			<section className="hero is-info is-fullheight">
+				<div className="hero-head">
+					
 					</div>
 
-					<div class="hero-body">
-						<div class="container has-text-centered">
-							<div class="column is-6 is-offset-3">
+					<div className="hero-body">
+						<div className="container has-text-centered">
+							<div className="column is-6 is-offset-3">
 								<img src={logo}></img>
-								<h1 class="title">
+								<h1 className="title">
 									YouTube.Live
 								</h1>
-								<h2 class="subtitle">Great Live Music . Period</h2>
+								<h2 className="subtitle">Great Live Music . Period</h2>
 								<div>
 									<Carousel />
 								</div>

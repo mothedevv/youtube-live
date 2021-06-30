@@ -1,13 +1,15 @@
 import React from "react";
-import Navbar from "../../components/Navbar";
-import Card from "../../components/card";
-import Footer from "../../components/Footer";
-function Venue(){
+import Venue from './nationwide.jpeg'
+
+function Venues(){
     return (
         <div>
-            <Navbar />
-            <Card />
-            <Footer />
-        </div>
+          <div class="container">
+              
+          </div>
+            
+        </div>    
     )
 }
+
+export default Venues;

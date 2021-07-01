@@ -1,85 +1,60 @@
-import React from 'react';
-import '../pages/landingPage/style.css';
 import 'bulma/css/bulma.min.css';
+import React, { useContext, useEffect, useState } from 'react';
+import '../pages/landingPage/style.css';
+import { UserContext } from '../utils/UserContext';
+import NavLink from './NavLink';
 
-
-
-function Navbar(){
-	
+function Navbar() {
+	const [loggedIn, setLoggedIn] = useContext(UserContext);
+	const [navLinks, setNavLinks] = useState([]);
+	useEffect(() => {
+		!loggedIn
+			? setNavLinks([
+					{ name: 'Home', toLink: '/', icon: 'fas fa-home' },
+					{ name: 'Venues', toLink: '/venues', icon: 'fas fa-guitar' },
+					{ name: 'Artist', toLink: '/artist', icon: 'fas fa-music' },
+					{ name: 'Social', toLink: '/social', icon: 'fas fa-user-friends' },
+					{ name: 'Login', toLink: '/login', icon: 'fas fa-sign-in-alt' },
+					{ name: 'Signup', toLink: '/signup', icon: 'fas fa-user-plus' },
+			  ])
+			: setNavLinks([
+					{ name: 'Home', toLink: '/', icon: 'fas fa-home' },
+					{ name: 'Venues', toLink: '/venues', icon: 'fas fa-guitar' },
+					{ name: 'Artist', toLink: '/artist', icon: 'fas fa-music' },
+					{ name: 'Social', toLink: '/social', icon: 'fas fa-user-friends' },
+					{
+						name: 'Dashboard',
+						toLink: '/dashboard',
+						icon: 'fa fa-user-circle',
+					},
+					{ name: 'Logout', toLink: '/', icon: 'fas fa-sign-out-alt' },
+			  ]);
+		return () => {
+			console.log('Nav links set.');
+			console.log('unmounted.');
+		};
+	}, [loggedIn]);
 
 	return (
 		<nav className="navbar">
-						<div className="container">
-							<div className="navbar-brand">
-								<span className="navbar-burger burger" data-target="navbarMenu">
-									<span></span>
-									<span></span>
-									<span></span>
-								</span>
-							</div>
-							<div id="navbarMenu" className="navbar-menu">
-								<div className="navbar-end">
-									<span className="navbar-item">
-										<a  href="/" className="button is-white is-outlined">
-											<span className="icon">
-												<i className="fa fa-home"></i>
-											</span>
-											<span>Home</span>
-										</a>
-									</span>
-									<span className="navbar-item">
-										<a  href="/" className="button is-white is-outlined">
-											<span className="icon">
-												<i className="fas fa-guitar"></i>
-											</span>
-											<span>Venues</span>
-										</a>
-									</span>
-									<span className="navbar-item">
-										<a  href="/" className="button is-white is-outlined">
-											<span className="icon">
-												<i className="fas fa-music"></i>
-											</span>
-											<span>Artists</span>
-										</a>
-									</span>
-									<span className="navbar-item">
-										<a  href="/" className="button is-white is-outlined" >
-											<span className="icon">
-												<i className="fas fa-user-friends"></i>
-											</span>
-											<span>Social</span>
-										</a>
-									</span>
-									<span className="navbar-item">
-										<a  href="/" className="button is-white is-outlined" >
-											<span className="icon">
-												<i className="fas fa-question"></i>
-											</span>
-											<span>Try it out</span>
-										</a>
-									</span>
-									<span className="navbar-item">
-										<a  href="/" className="button is-purple is-outlined" >
-											<span className="icon">
-												<i className="fas fa-sign-in-alt"></i>
-											</span>
-											<span>Login</span>
-										</a>
-									</span>
-									<span className="navbar-item">
-										<a  href="/" className="button is-purple is-outlined" >
-											<span className="icon">
-												<i className="fas fa-user-plus"></i>
-											</span>
-											<span>Signup</span>
-										</a>
-									</span>
-								</div>
-							</div>
-						</div>
-					</nav>
+			<div className="container">
+				<div className="navbar-brand">
+					<span className="navbar-burger burger" data-target="navbarMenu">
+						<span></span>
+						<span></span>
+						<span></span>
+					</span>
+				</div>
+				<div id="navbarMenu" className="navbar-menu">
+					<div className="navbar-end">
+						{navLinks.map((link) => (
+							<NavLink name={link.name} toLink={link.toLink} icon={link.icon} />
+						))}
+					</div>
+				</div>
+			</div>
+		</nav>
 	);
-};
+}
 
 export default Navbar;

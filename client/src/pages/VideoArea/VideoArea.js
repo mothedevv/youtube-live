@@ -8,7 +8,7 @@ import "../../../src/index.css";
 
 
 //API key need to be inserted and hidden with secret
-const API_KEY = ""; 
+const API_KEY = process.env.REACT_APP_YOUTUBE_API_KEY
 
 class VideoArea extends React.Component {
       
@@ -30,7 +30,7 @@ class VideoArea extends React.Component {
               part: 'snippet',
               maxResults: 5,
               q: term,
-              key: KEY
+              key: API_KEY
      
             }
           }).then((response) => {

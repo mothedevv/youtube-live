@@ -2,6 +2,8 @@ import React, { useContext, useRef } from 'react';
 import { Redirect } from 'react-router';
 import User from '../../utils/UserAPI';
 import { UserContext } from '../../utils/UserContext';
+import 'bulma/css/bulma.min.css';
+import './style.css'
 
 export default function SignUp() {
 	const firstNameRef = useRef();

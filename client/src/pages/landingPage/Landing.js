@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import 'bulma/css/bulma.min.css';
 import './style.css';
 import logo from '../../images/logo.svg'
@@ -23,7 +23,7 @@ function LandingPage() {
 					<div className="hero-body">
 						<div className="container has-text-centered">
 							<div className="column is-6 is-offset-3">
-								<img src={logo}></img>
+								<img src={logo} alt="Logo"></img>
 								<h1 className="title">
 									YouTube.Live
 								</h1>

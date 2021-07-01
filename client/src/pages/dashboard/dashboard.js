@@ -38,7 +38,7 @@ class Dashboard extends Component
             <Router>
                 <div>
                     <body>
-                        <section className="hero is-info">
+                        <section className="hero is-info-dashboard">
                             <div className="hero-body">
                                 <div className="container">
                                     <h1 className="title"> 

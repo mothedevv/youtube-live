@@ -45,22 +45,24 @@ class VideoArea extends React.Component {
                 function(err) { console.error("Error youtube client", err); });
     }
 
-    // render() {
-    //     return (
-    //         <div>
-    //         <div className="container">
-    //             <SearchBox
-    //              onChange={(searchTerm) => {this.videoSearch(searchTerm)}} />
-    //             <VideoPlayer video={this.state.selectedVideo} />
-    //             <VideoResults
-    //             onVideoSelect={(selectedVideo) => {this.setState({selectedVideo})}}
-    //             video={this.state.videos} 
-    //             />
-    //         </div>
-    //         </div>
-    //       );
+      render() {
+        return (
+       <div className="jumbrotron container">
+          <SearchBox onFormSubmit={this.onTermSubmit} />
+              <div className="table">
+                  <div className="row">
+                    <div className="col">
+                          <VideoPlayer video = {this.state.selectedVideo} />
+                   </div>
+                   <div className="col">
+                          <VideoResults onVideoSelect={this.onVideoSelect} videos={this.state.videos} />
+                      </div>
+                 </div>
+            </div>
+        </div>
+    );
 
-    //     }
-    // }
+   }
+};
 
-    export default VideoArea;
+export default VideoArea;

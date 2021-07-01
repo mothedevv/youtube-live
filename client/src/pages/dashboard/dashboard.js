@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
 import './style.css'
 import 'bulma/css/bulma.min.css';
-
+import Profilenav from "../../components/Profilenav";
 class Dashboard extends Component 
 {
     constructor(props)

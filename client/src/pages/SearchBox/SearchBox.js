@@ -16,7 +16,6 @@ onInputChange=(event) => {
         <div className="search-box">
          <form onSubmit={this.onFormSubmit} className="form" >
          <label htmlFor="search">Search</label>
-         
           <input
           onChange={this.onInputChange} type="text" id="search" 
           placeholder="Live Music..." 

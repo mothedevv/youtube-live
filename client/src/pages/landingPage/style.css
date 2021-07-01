@@ -3,7 +3,10 @@ a
   text-decoration: none;
 }
 
-
+.navbar-burger
+{
+  color: #fff;
+}
 
 
 body{

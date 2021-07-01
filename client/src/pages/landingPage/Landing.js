@@ -1,7 +1,6 @@
 import 'bulma/css/bulma.min.css';
 import 'font-awesome/css/font-awesome.min.css';
 import React from 'react';
-import { render } from 'react-dom';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import Carousel from '../../components/Carousel';
 import logo from '../../images/logo.svg';
@@ -28,5 +27,4 @@ function LandingPage() {
 	);
 }
 
-render(<LandingPage />, document.getElementById('root'));
 export default LandingPage;

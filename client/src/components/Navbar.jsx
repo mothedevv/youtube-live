@@ -7,6 +7,8 @@ import NavLink from './NavLink';
 function Navbar() {
 	const [loggedIn, setLoggedIn] = useContext(UserContext);
 	const [navLinks, setNavLinks] = useState([]);
+	const [clicked, setClicked] = useState(false);
+	const [clickedClass, setClickedClass] = useState('');
 	useEffect(() => {
 		!loggedIn
 			? setNavLinks([
@@ -34,6 +36,11 @@ function Navbar() {
 			console.log('unmounted.');
 		};
 	}, [loggedIn]);
+
+	const handleClick = () => {
+		setClicked(true);
+		setClickedClass('is-active');
+	};
 
 	return (
 		<nav className="navbar">

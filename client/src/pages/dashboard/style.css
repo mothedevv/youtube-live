@@ -1,13 +1,8 @@
-*{
-    color: black;
-}
-
-.hero.is-info
+.hero.is-info-dashboard
 {
     
     background-image: linear-gradient(to right, #F2EC94 ,orange, #F06BF2, #A659D9);
     background-size: contain;
-    ;
 }
 
 .tabs {

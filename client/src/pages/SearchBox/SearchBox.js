@@ -2,30 +2,29 @@ import React, { Component } from 'react';
 
 
 class SearchBox extends Component {
-
-  constructor(props) {
-    super(props);
-
-    this.state = { term: '' };
-  }
-
-    onInputChange(term) {
-      this.setState({ term: term });
-      this.props.onChange(term);
+state = { term: "" };
+onInputChange=(event) => {
+  this.setState({term: event.target.value})
+}
+   onFormSubmit = (event) => {
+     event.preventDefault();
+      this.props.onFormSubmit(this.state.term);
   }
   
     render() {
       return (
         <div className="search-box">
+         <form onSubmit={this.onFormSubmit} className="form" >
+         <label htmlFor="search">Search</label>
+         
           <input
-          placeholder="Search Live Music..."
-          value={this.state.term} 
-          onChange={(event) => {
-            this.onInputChange(event.target.value)
-          }}
-          
-          />
-        </div>
+          onChange={this.onInputChange} type="text" id="search" 
+          placeholder="Live Music..." 
+          value={this.state.term}>
+          </input>
+          </form>
+          </div> 
+        
       );
    }
 }

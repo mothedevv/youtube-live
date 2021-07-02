@@ -3,21 +3,11 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import './style.css'
 import 'bulma/css/bulma.min.css';
-<<<<<<< HEAD
-import Profilenav from "../../components/Profilenav";
-class Dashboard extends Component 
-{
-    constructor(props)
-    {
-        super(props);
-        this.state = {clicked: false}
-=======
 
 import Profile from './Profile';
 import Venues from './Venues';
 import Artists from './Artists';
 import Search from './Search';
->>>>>>> 3d503fdb2aac8d60321511450dd5fe985f01339e
 
 
 

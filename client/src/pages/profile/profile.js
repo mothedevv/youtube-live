@@ -8,14 +8,21 @@ function Userprofile() {
                 <div class="card">
                 <div class="card-image">
                     <figure class="image-is4by3">
-                        <img src="client/src/pages/profile/6536543.png" alt="placeholder image for profile pic"></img>
+                        <img class="is-rounded" src="client/src/pages/profile/6536543.png" alt="placeholder image for profile pic"></img>
                     </figure>
                 </div>
                 <div class="card-content">
                     <div class="content">
-                        Test test test test
+                        Placer holder user bio
                     </div>
                 </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <div class="content">
+                            more user area
+                        </div>
+                    </div>
                 </div>
         </div>
     )

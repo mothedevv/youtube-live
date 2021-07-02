@@ -1,24 +1,33 @@
 import React, { Component } from "react";
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import './style.css'
 import 'bulma/css/bulma.min.css';
-
-import Profile from './Profile';
-import Venues from './Venues';
-import Artists from './Artists';
-import Search from './Search';
 
 
 
 class Dashboard extends Component 
 {
-    state = { clicked: false }
+    constructor(props)
+    {
+        super(props);
+        this.state = {clicked: false}
 
-	handleClick=()=>
-	{
-		this.setState ({ clicked: !this.state.clicked, className: "is-active" })
-	}
+        this.handleClick = this.handleClick.bind(this);
+    }
+
+    
+
+    handleClick=()=>
+    {
+        this.setState({ 
+            clicked: !this.state.clicked,
+            className: "is-active"
+        });
+
+    }
+
+
 
     render(ID, className)
     {
@@ -41,43 +50,35 @@ class Dashboard extends Component
                             </div>
                             <div className="tabs is-boxed is-centered main-menu" id="nav">
                                 <ul>
-                                    <li data-target="#pane-1" id="1" className="li" >
-                                        <Link to="/profile">
+                                    <li data-target="#pane-1" id="1" className={this.state.clicked ? 'is-active' : 'li'} >
+                                        <a>
                                             <span className="icon is-small"><i className="fa fa-image"></i></span>
-                                            <span>My Profile</span>
-                                        </Link>
+                                            <span>My Playlists</span>
+                                        </a>
                                     </li>
-                                    <li data-target="#pane-2" id="2" className="li">
-                                        <Link to="/venues">
+                                    <li data-target="#pane-2" id="2" className={this.state.clicked ? 'is-active' : 'li'}>
+                                        <a>
                                             <span className="icon is-small"><i className="fab fa-empire"></i></span>
                                             <span>My Venues</span>
-                                        </Link>
+                                        </a>
                                     </li>
-                                    <li data-target="#pane-3" id="3" className="li">
-                                        <Link to="/artists">
+                                    <li data-target="#pane-3" id="3" className={this.state.clicked ? 'is-active' : 'li'}>
+                                        <a>
                                             <span className="icon is-small"><i className="fab fa-superpowers"></i></span>
                                             <span>My Artists</span>
-                                        </Link>
+                                        </a>
                                     </li>
-                                    <li data-target="#pane-4" id="4" className="li">
-                                        <Link to="/search">
+                                    <li data-target="#pane-4" id="4" className={this.state.clicked ? 'is-active' : 'li'}>
+                                        <a>
                                             <span className="icon is-small"><i className="fa fa-film"></i></span>
-                                            <span>Search</span>
-                                        </Link>
+                                            <span>Find Something New</span>
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
                             
                         </section>
                     </body>
-
-                    <Switch>
-                        <Route path="/dashboard/profile" component={Profile} />
-                        <Route path="/dashboard/venues" component={Venues}/>
-                        <Route path="/dashboard/artists" component={Artists} />
-                        <Route path="/dashboard/search" component={Search}/>
-                        
-                    </Switch>
                 </div>
             </Router>
         )

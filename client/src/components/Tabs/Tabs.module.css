@@ -1,0 +1,49 @@
+.dashboard {
+	background-image: linear-gradient(
+		to right,
+		#f2ec94,
+		orange,
+		#f06bf2,
+		#a659d9
+	);
+	background-size: contain;
+	padding: 1em 2em;
+	margin: 2em 0;
+	border-radius: 10px;
+}
+
+.tabs {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+}
+
+.tabs > li {
+	padding: 0.5em 1em;
+	margin: 0 1em;
+}
+
+.tabs > li > a {
+	color: white;
+}
+
+.current {
+	background: rgba(0, 0, 0, 0.75);
+	color: white;
+	font-weight: bold;
+	border: 2px solid white;
+	border-bottom: 0;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	position: relative;
+	top: 2px;
+}
+
+.content {
+	padding: 1em 2em;
+	background: rgba(0, 0, 0, 0.75);
+	color: white;
+	border: 2px solid white;
+	border-radius: 10px;
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import './App.css';
 import Features from './components/Features';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
@@ -16,7 +17,7 @@ const App = () => {
 			<UserProvider>
 				<div>
 					<Navbar />
-					<div className="container">
+					<div id="routeContainer" className="container">
 						<Switch>
 							<Route exact path="/" component={LandingPage} />
 							<Route exact path="/signup" component={SignUp} />

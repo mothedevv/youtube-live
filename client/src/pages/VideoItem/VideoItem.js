@@ -2,20 +2,15 @@ import React from 'react';
 import "../../../src/index.css";
 
 
-const VideoItem = ({video, onVideoSelect}) => {
-    const imgUrl = video.snippet.thumbnail.default.url;
-
+const VideoItem = (props) => {
+  
     return(
-    <li className="list-group-item" onClick={() => {onVideoSelect(video) }}>
-        <div className="video-list media">
-            <div className="media-left">
-                <img className="media-object" src={imgUrl} alt="thumbnail"/>
-                </div>
-                <div className="media-body">
-                <div className="media-heading">{video.snippet.title}</div>
-                </div>
-            </div>
-        </li>
+        <div className="video-item" onClick={() => props.onVideoSelect(props.video)} >
+                <img className="video-image" src={props.video.snippet.thumbnails.medium.url} alt={props.video.snippet.title}/>
+                <div className="video-content"> 
+                <div className="video-header">{props.video.snippet.title}</div>
+           </div>
+        </div>        
     );
 } 
 

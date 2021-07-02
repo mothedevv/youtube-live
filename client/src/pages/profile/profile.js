@@ -11,6 +11,11 @@ function Userprofile() {
                         <img src="client/src/pages/profile/6536543.png" alt="placeholder image for profile pic"></img>
                     </figure>
                 </div>
+                <div class="card-content">
+                    <div class="content">
+                        Test test test test
+                    </div>
+                </div>
                 </div>
         </div>
     )

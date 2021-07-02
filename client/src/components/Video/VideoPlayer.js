@@ -1,5 +1,5 @@
 import React from "react";
-import "../../../src/index.css";
+import "../../video.css";
 
 
 const VideoPlayer = ({ props }) => {
@@ -10,8 +10,7 @@ const VideoPlayer = ({ props }) => {
       <div className="embed-responsive embeded">
         <iframe allowfullscreen="allowFullScreen"
          title={props.video.snippet.title}
-         src={videoSrc} 
-         />
+         src={videoSrc} />
      </div>
       <div className="card">
         <div>{props.video.snippet.title}</div>

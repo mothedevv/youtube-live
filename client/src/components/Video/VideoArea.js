@@ -1,13 +1,12 @@
 import React from 'react';
 // import NavBar from '../NavBar/NavBar';
-import youtube from '../..utils/API'
-import SearchBox from '../SearchBox/SearchBox';
+import youtube from '../../utils/API'
+import VideoSearch from '../VideoSearch/VideoSearch';
 import VideoPlayer from '../VideoPlayer/VideoPlayer';
 import VideoResults from '../VideoResults/VideoResults';
-import "../../../src/index.css";
+import "../video/video.css";
 
-
-//API key need to be inserted and hidden with secret
+//Youtube API Key
 const API_KEY = process.env.REACT_APP_YOUTUBE_API_KEY
 
 class VideoArea extends React.Component {
@@ -21,7 +20,7 @@ class VideoArea extends React.Component {
       this.setState({selectedVideo: video})
   }
   componentDidMount = () => {
-      this.onTermSubmit('livemusic')
+      this.onTermSubmit('concert')
   }
     
        onTermSubmit = (term) => {
@@ -41,14 +40,14 @@ class VideoArea extends React.Component {
       loadClient=() => {
         youtube.client.setApiKey(API_KEY)
         return youtube.client.load("https://www.googleapis.com/discovery/v1/apis/youtube/v3/rest")
-            .then(function() { console.log("youtube client"); },
-                function(err) { console.error("Error youtube client", err); });
+            .then(function() { console.log("loading youtube client"); },
+                function(err) { console.error("Error loading youtube client", err); });
     }
 
       render() {
         return (
        <div className="jumbrotron container">
-          <SearchBox onFormSubmit={this.onTermSubmit} />
+          <VideoSearch onFormSubmit={this.onTermSubmit} />
               <div className="table">
                   <div className="row">
                     <div className="col">

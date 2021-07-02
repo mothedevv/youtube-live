@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 
-class SearchBox extends Component {
+class VideoSearch extends Component {
 state = { term: "" };
 onInputChange=(event) => {
   this.setState({term: event.target.value})
@@ -13,9 +13,9 @@ onInputChange=(event) => {
   
     render() {
       return (
-        <div className="search-box">
+        <div className="video-search">
          <form onSubmit={this.onFormSubmit} className="form" >
-         <label htmlFor="search">Search</label>
+         <label htmlFor="search">Search </label>
           <input
           onChange={this.onInputChange} type="text" id="search" 
           placeholder="Live Music..." 
@@ -29,5 +29,5 @@ onInputChange=(event) => {
 }
  
 
-export default SearchBox;
+export default VideoSearch;
   

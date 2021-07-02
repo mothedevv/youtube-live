@@ -3,10 +3,7 @@ a
   text-decoration: none;
 }
 
-.navbar-burger
-{
-  color: #fff;
-}
+
 
 
 body{
@@ -34,4 +31,15 @@ body{
 .hero.is-info
 {
   background: transparent;
+}
+
+.menu-icon
+{
+  color: #fff;
+  
+}
+
+.is-active
+{
+  background-color: #fff;
 }

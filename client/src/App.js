@@ -4,11 +4,9 @@ import './App.css';
 import Features from './components/Features';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
-import Dashboard from './pages/dashboard/dashboard';
 import LandingPage from './pages/landingPage/Landing';
 import Login from './pages/login/Login';
 import SignUp from './pages/signup/SignUp';
-import Venues from './pages/venue/venue';
 import { UserProvider } from './utils/UserContext';
 
 const App = () => {

@@ -1,67 +1,106 @@
-import 'bulma/css/bulma.min.css';
-import React, { useContext, useEffect, useState } from 'react';
+import React, { Component } from 'react';
 import '../pages/landingPage/style.css';
-import { UserContext } from '../utils/UserContext';
-import NavLink from './NavLink';
+import 'bulma/css/bulma.min.css';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+import LandingPage from '../pages/landingPage/Landing';
+import Login from '../pages/login/Login';
+import Signup from '../pages/signup/SignUp';
+import Dashboard from '../pages/dashboard/dashboard';
 
-function Navbar() {
-	const [loggedIn, setLoggedIn] = useContext(UserContext);
-	const [navLinks, setNavLinks] = useState([]);
-	const [clicked, setClicked] = useState(false);
-	const [clickedClass, setClickedClass] = useState('');
-	useEffect(() => {
-		!loggedIn
-			? setNavLinks([
-					{ name: 'Home', toLink: '/', icon: 'fas fa-home' },
-					{ name: 'Venues', toLink: '/venues', icon: 'fas fa-guitar' },
-					{ name: 'Artist', toLink: '/artist', icon: 'fas fa-music' },
-					{ name: 'Social', toLink: '/social', icon: 'fas fa-user-friends' },
-					{ name: 'Login', toLink: '/login', icon: 'fas fa-sign-in-alt' },
-					{ name: 'Signup', toLink: '/signup', icon: 'fas fa-user-plus' },
-			  ])
-			: setNavLinks([
-					{ name: 'Home', toLink: '/', icon: 'fas fa-home' },
-					{ name: 'Venues', toLink: '/venues', icon: 'fas fa-guitar' },
-					{ name: 'Artist', toLink: '/artist', icon: 'fas fa-music' },
-					{ name: 'Social', toLink: '/social', icon: 'fas fa-user-friends' },
-					{
-						name: 'Dashboard',
-						toLink: '/dashboard',
-						icon: 'fa fa-user-circle',
-					},
-					{ name: 'Logout', toLink: '/', icon: 'fas fa-sign-out-alt' },
-			  ]);
-		return () => {
-			console.log('Nav links set.');
-			console.log('unmounted.');
-		};
-	}, [loggedIn]);
 
-	const handleClick = () => {
-		setClicked(true);
-		setClickedClass('is-active');
-	};
 
-	return (
-		<nav className="navbar">
-			<div className="container">
-				<div className="navbar-brand">
-					<span className="navbar-burger burger" data-target="navbarMenu">
-						<span></span>
-						<span></span>
-						<span></span>
-					</span>
-				</div>
-				<div id="navbarMenu" className="navbar-menu">
-					<div className="navbar-end">
-						{navLinks.map((link) => (
-							<NavLink name={link.name} toLink={link.toLink} icon={link.icon} />
-						))}
-					</div>
-				</div>
+class Navbar extends Component 
+{
+	state = { clicked: false }
+
+	handleClick=()=>
+	{
+		this.setState ({ clicked: !this.state.clicked })
+	}
+
+	render()
+	{
+		return(
+			
+				<Router>
+					<div>
+					<nav className="navbar">
+						<div className="menu-icon" onClick={this.handleClick}>
+							<i className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}/>
+						</div>
+						<div className="container">
+							
+							<div id="navbarMenu" className="navbar-menu">
+								<div className="navbar-end">
+									<span className="navbar-item">
+										<Link  to="/" className="button is-white is-outlined">
+											<span className="icon">
+												<i className="fa fa-home"></i>
+											</span>
+											<span>Home</span>
+										</Link>
+									</span>
+									<span className="navbar-item">
+										<Link  to="/venues" className="button is-white is-outlined">
+											<span className="icon">
+												<i className="fas fa-guitar"></i>
+											</span>
+											<span>Venues</span>
+										</Link>
+									</span>
+									<span className="navbar-item">
+										<Link  to="/artists" className="button is-white is-outlined">
+											<span className="icon">
+												<i className="fas fa-music"></i>
+											</span>
+											<span>Artists</span>
+										</Link>
+									</span>
+									<span className="navbar-item">
+										<Link  to="/social" className="button is-white is-outlined" >
+											<span className="icon">
+												<i className="fas fa-user-friends"></i>
+											</span>
+											<span>Social</span>
+										</Link>
+									</span>
+									
+									<span className="navbar-item">
+										<Link  to="/login" className="button is-purple is-outlined" >
+											<span className="icon">
+												<i className="fas fa-sign-in-alt"></i>
+											</span>
+											<span>Login</span>
+										</Link>
+									</span>
+									<span className="navbar-item">
+										<Link  to="/signup" className="button is-purple is-outlined" >
+											<span className="icon">
+												<i className="fas fa-user-plus"></i>
+											</span>
+											<span>Signup</span>
+										</Link>
+									</span>
+								</div>
+							</div>
+						</div>
+					</nav>
+
+					<Switch>
+						<Route path="/" component={LandingPage} exact/>
+						<Route path="/login" component={Login} exact/>
+						<Route path="/signup" component={Signup} exact/>
+						<Route path="/dashboard" component={Dashboard} exact/>
+					</Switch>
 			</div>
-		</nav>
-	);
-}
+
+				
+
+			</Router>
+		)
+		
+		
+	}	
+};
 
 export default Navbar;

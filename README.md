@@ -1,16 +1,10 @@
 # YouTube.Live
 
-```
-Great Live Music. Period.
-
-```
+<img src="client/public/assets/logoscreenshot.png" width="800px">
 
 ## Description 
 
-Attend live concerts right from the comfort of your own home.  Watch your favorite musical artists and legendary rock bands perform in concert venues from all around the globe. Discover rare intimate peformances and historic sold out shows. 
-
-Find/Search/Stream (add more...)
-
+Attend live concerts right from the comfort of your own home.  Watch your favorite musical artists and legendary rock bands perform in concert venues from around the globe. Discover rare intimate peformances and historic sold out shows all in one place. Search for upcoming live in events in your area and find information about your favorite artists, venues, and concert locations.  
 
 The is application is deployed on Heroku: [YouTube.Live](/)
 
@@ -42,7 +36,7 @@ As a user, I want a channel to stream live music and find information about my f
 
 ## Business Context
 
-Musical Artists and Venue Owners would benefit grealtly from making Live Concert Events more accessible to wide audiences. Creating a channel to stream live music would provide a safer and more affordable concert experience for audiences and generate more revenue for both parties. Audiences would benefit from the convenience and flexibiliy of streaming live music from the comfort of their own home while venue owners wouldn't have to worry about overcrowded ampitheaters.
+Musical Artists and Venue Owners would benefit greatly from making Live Concert Events more accessible to a wider audience. Creating a channel to stream live music would provide a safer and more affordable concert experience for audiences and generate more revenue for both parties. Audiences would benefit from the convenience and flexibiliy of streaming live music from the comfort of their own home with out having to worry about the health risks of an overcrowded ampitheater making it easier for venue owners to maintain covid safety regulations.  
 
 
 ## Market Research:
@@ -60,6 +54,10 @@ Musical Artists and Venue Owners would benefit grealtly from making Live Concert
     - [Amp Live](https://www.amplivemusic.com/)
  
 ## Current Features
+
+[YouTube.Live](#) is an application that provides access to resources pertaining to `live concert events` such as artist, venue, and location information, and video content musical performances. 
+
+Users can:
 
 --info/facts about artists and musical venues? Stories behind the music/
 --share/like/comment on videos and performances.
@@ -84,7 +82,7 @@ The Stream live concerts in real-time (add more...)
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
-[youtube-api-search](https://www.npmjs.com/package/youtube-api-search)
+[Bulma](/) front end css framework.
 
 [YouTube Data API v3](https://console.cloud.google.com/apis/library/youtube.googleapis.com?project=vaulted-channel-306702) HTTP requests for Live Music Videos.
 
@@ -104,11 +102,11 @@ Please see the following guide for more information on using [create-react-app](
 
 ## Usage 
 
-To use this App, please:
+Please apply for the following API keys to start retrieving live concert data:
 
-Apply for a [SongKick](https://www.songkick.com/api_key_requests/new) API key.
+[SongKick API](https://www.songkick.com/api_key_requests/new).
 
-Request a [YouTube Data API v3](https://developers.google.com/youtube?hl=en) API key from Google Developer Console.
+[YouTube Data API v3](https://developers.google.com/youtube?hl=en) from Google Developer Console.
 
 This application is deployed on Heroku: [YouTube.Live](/)
 
@@ -140,15 +138,17 @@ Password: testlive123
 
 ## Contributing
 
-Please refer to the [Contributor Covenant](https://www.contributor-covenant.org/) for contribution guidelines.
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.0-4baaaa.svg)](code_of_conduct.md)
+
+We as [Collaborators](#collaborators) pledge to act and interact in ways that contribute to an open, welcoming, diverse, inclusive, and healthy community. For contributing guidelines, please see: [Contributor Covenant Code of Conduct](https://www.contributor-covenant.org/) 
 
 
 ## Badges
 
 ![badtmath](https://img.shields.io/badge/React-YouTube.live-blue)
 ![badmath](https://img.shields.io/github/languages/top/nielsenjared/badmath)
-
-Badges aren't _necessary_, per se, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
+ 
+ Badges hosted by [shields.io](https://shields.io/). 
 
 ## Acceptance Criteria
 
@@ -165,11 +165,9 @@ Badges aren't _necessary_, per se, but they demonstrate street cred. Badges let 
 * Must not expose sensitive API key information on the server.
 
 
-## License
+## Copyright & Licenses
 
-This application was created as a Final Group Project for `The Ohio State University's Full Stack Coding Bootcamp` and is not intended for commercial use. 
-
-This project is for educational purposes only and is not affiliated with [YouTube](https://developers.google.com/terms?hl=en) or [SongKick](https://www.songkick.com/developer/api-terms-of-use), and the [collaborators](#collaborators) have no plans to generate revenue with this application. 
+This application uses third-party data in compliance with the `API Terms of Use Agreement` set forth by [YouTube API Services Terms of Service](https://developers.google.com/terms?hl=en) and [SongKick API Term of Use Agreement](https://www.songkick.com/developer/api-terms-of-use)
 
 The content of this application is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For further details, see the Google [Developers Site Policies](https://developers.google.com/terms/site-policies). 
 

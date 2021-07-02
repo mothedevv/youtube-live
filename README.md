@@ -1,6 +1,6 @@
 # YouTube.Live
 
-<img src="client/public/assets/logoscreenshot.png" width="800px">
+<img src="client/public/assets/logoscreenshot.png" width="1000px">
 
 ## Description 
 

@@ -2,27 +2,32 @@ import React from "react";
 import "../../../src/index.css";
 
 
-const VideoPlayer = ({ video }) => {
-  if (!video) {
-    return <div>Warming up...</div>;
-  }
-const videoId = video.id.videoId;
-const url = `https://youtube.com/embed/${videoId}`;
-
-return (
-  <div className="video-detail col-md-8" id="player">
- <div className="embed-responsive embed responsive=16by9">
-   <iframe className="embed-responsive-item" src={url} title="video-player"></iframe>
- </div>
- <div className="details">
-   <div>{video.snippet.title}</div>
-   <div>{video.snippet.description}</div>
- </div>
-  </div>
-
+const VideoPlayer = ({ props }) => {
+  if (props.video) {
+  const videoSrc=`https://youtube.com/embed/${props.video.id.videoId}`;
+  return(  
+    <div>  
+      <div className="embed-responsive embeded">
+        <iframe allowfullscreen="allowFullScreen"
+         title={props.video.snippet.title}
+         src={videoSrc} 
+         />
+     </div>
+      <div className="card">
+        <div>{props.video.snippet.title}</div>
+       <div>{props.video.snippets.description}</div>
+     </div>
+   </div>
 );
 
+  }
+  else {
+    return (
+      <div></div>
+   )
 }
+};
+
 
 export default VideoPlayer;
 

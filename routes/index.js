@@ -1,9 +1,12 @@
 const path = require('path');
 const router = require('express').Router();
 const apiRoutes = require('./api');
+// const axios = require('axios');
 
 // API Routes
 router.use('/api', apiRoutes);
+
+
 
 // If no API routes are hit, send the React app
 router.use(function (req, res) {
@@ -12,8 +15,4 @@ router.use(function (req, res) {
 
 module.exports = router;
 
-// import axios from "axios";
 
-// export default axios.create({
-//   baseURL: "https://www.googleapis.com/youtube/v3",
-// });

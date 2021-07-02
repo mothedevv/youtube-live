@@ -15,7 +15,7 @@ class Navbar extends Component
 
 	handleClick=()=>
 	{
-		this.setState ({ clicked: !this.state.clicked, className: "is-active" })
+		this.setState ({ clicked: !this.state.clicked })
 	}
 
 	render()
@@ -25,14 +25,11 @@ class Navbar extends Component
 				<Router>
 					<div>
 					<nav className="navbar">
+						<div className="menu-icon" onClick={this.handleClick}>
+							<i className={this.state.clicked ? 'fas fa-times' : 'fas fa-bars'}/>
+						</div>
 						<div className="container">
-							<div className="navbar-brand">
-								<span className="navbar-burger burger" data-target="navbarMenu">
-									<span></span>
-									<span></span>
-									<span></span>
-								</span>
-							</div>
+							
 							<div id="navbarMenu" className="navbar-menu">
 								<div className="navbar-end">
 									<span className="navbar-item">
@@ -67,14 +64,7 @@ class Navbar extends Component
 											<span>Social</span>
 										</Link>
 									</span>
-									<span className="navbar-item">
-										<Link  to="/dashboard" className="button is-white is-outlined" >
-											<span className="icon">
-												<i className="fas fa-question"></i>
-											</span>
-											<span>Try it out</span>
-										</Link>
-									</span>
+									
 									<span className="navbar-item">
 										<Link  to="/login" className="button is-purple is-outlined" >
 											<span className="icon">

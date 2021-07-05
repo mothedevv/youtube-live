@@ -2,7 +2,7 @@ const searchbtn = document.querySelector('.btn');
 
 function callApi(){
     const cbus = 9480
-    const apiKey = ''
+    const apiKey = process.env.apiKEY;
 
     const songAPI = 'https://api.songkick.com/api/3.0/metro_areas/'+ cbus +'/calendar.json?apikey=' + apiKey
 

@@ -13,7 +13,9 @@ function callApi(){
 
 
     const geekAPI = 'https://api.seatgeek.com/2/performers?slug='+ keyword +'&client_id='+ clientID 
-
+    // this URL pulls artist search directly 
+    //const geekAPI = 'https://api.seatgeek.com/2/venues?city='+ keyword +'&client_id='+ clientID 
+    //this URL pulls venues 
     console.log(geekAPI);
 
 
@@ -30,6 +32,12 @@ function callApi(){
                  let numUpcomingEvents = data.performers[i].num_upcoming_events;
                  console.log(artistName + ' ' + numUpcomingEvents)
              }
+            // for (let i = 0; i < data.venues.length ; i++) {
+            //     let venues = data.venues[i].name;
+            //     let address = data.venues[i].address;
+            //     console.log(venues + ' ' + address);
+            // }
+            // this loop for example pulls names of venues 
     })
     
 }

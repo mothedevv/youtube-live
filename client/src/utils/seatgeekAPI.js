@@ -16,6 +16,7 @@ function callApi(){
     // this URL pulls artist search directly 
     //const geekAPI = 'https://api.seatgeek.com/2/venues?city='+ keyword +'&client_id='+ clientID 
     //this URL pulls venues 
+    //if you want to pull state venues just change city to state and have the user enter it 
     console.log(geekAPI);
 
 
@@ -32,6 +33,7 @@ function callApi(){
                  let numUpcomingEvents = data.performers[i].num_upcoming_events;
                  console.log(artistName + ' ' + numUpcomingEvents)
              }
+             //can pull URL to get tickets for events either through performers or venue
             // for (let i = 0; i < data.venues.length ; i++) {
             //     let venues = data.venues[i].name;
             //     let address = data.venues[i].address;

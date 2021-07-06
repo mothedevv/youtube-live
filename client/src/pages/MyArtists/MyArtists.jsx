@@ -1,39 +1,21 @@
-import React, { Component } from "react";
-import ReactDOM from 'react-dom';
-import { BrowserRouter as Router } from 'react-router-dom';
-import './style.css'
-import 'bulma/css/bulma.min.css';
+import React,{ Component }  from 'react';
+import {BrowserRouter as Router, Link, Switch, Route} from 'react-router-dom';
+import MyVenues from '../MyVenues/MyVenues';
+import Profile from '../Profile/Profile';
+import Search from '../Search/Search';
 
-
-
-class Dashboard extends Component 
+class MyArtists extends Component
 {
-    constructor(props)
+    state = { clicked: false }
+
+	handleClick=()=>
+	{
+		this.setState ({ clicked: !this.state.clicked })
+	}
+
+    render()
     {
-        super(props);
-        this.state = {clicked: false}
-
-        this.handleClick = this.handleClick.bind(this);
-    }
-
-    
-
-    handleClick=()=>
-    {
-        this.setState({ 
-            clicked: !this.state.clicked,
-            className: "is-active"
-        });
-
-    }
-
-
-
-    render(ID, className)
-    {
-        
-
-        return (
+        return(
             <Router>
                 <div>
                     <body>
@@ -51,41 +33,49 @@ class Dashboard extends Component
                             <div className="tabs is-boxed is-centered main-menu" id="nav">
                                 <ul>
                                     <li data-target="#pane-1" id="1" className={this.state.clicked ? 'is-active' : 'li'} >
-                                        <a>
+                                        <Link to="/profile">
                                             <span className="icon is-small"><i className="fa fa-image"></i></span>
-                                            <span>My Playlists</span>
-                                        </a>
+                                            <span>Profile</span>
+                                        </Link>
                                     </li>
                                     <li data-target="#pane-2" id="2" className={this.state.clicked ? 'is-active' : 'li'}>
-                                        <a>
+                                        <Link to="/myvenues">
                                             <span className="icon is-small"><i className="fab fa-empire"></i></span>
                                             <span>My Venues</span>
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li data-target="#pane-3" id="3" className={this.state.clicked ? 'is-active' : 'li'}>
-                                        <a>
+                                        <Link to="/myartists">
                                             <span className="icon is-small"><i className="fab fa-superpowers"></i></span>
                                             <span>My Artists</span>
-                                        </a>
+                                        </Link>
                                     </li>
                                     <li data-target="#pane-4" id="4" className={this.state.clicked ? 'is-active' : 'li'}>
-                                        <a>
+                                        <Link to="/search">
                                             <span className="icon is-small"><i className="fa fa-film"></i></span>
-                                            <span>Find Something New</span>
-                                        </a>
+                                            <span>Search</span>
+                                        </Link>
                                     </li>
                                 </ul>
                             </div>
                             
                         </section>
                     </body>
+                    
+                    <Switch>
+                        
+                        <Route path="/profile" component={Profile} exact />
+                        <Route path="/myvenues" component={MyVenues} exact />
+                        <Route path="/search" component={Search} exact />
+                    </Switch>
                 </div>
             </Router>
+            
         )
     }
     
     
 }
 
-ReactDOM.render(<Dashboard />, document.getElementById('root'));
-export default Dashboard;
+
+export default MyArtists;

@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import LandingPage from '../pages/landingPage/Landing';
 import Login from '../pages/login/Login';
 import Signup from '../pages/signup/SignUp';
-import Dashboard from '../pages/dashboard/dashboard';
+import Profile from '../pages/Profile/Profile';
 
 
 
@@ -90,7 +90,7 @@ class Navbar extends Component
 						<Route path="/" component={LandingPage} exact/>
 						<Route path="/login" component={Login} exact/>
 						<Route path="/signup" component={Signup} exact/>
-						<Route path="/dashboard" component={Dashboard} exact/>
+						<Route path="/profile" component={Profile} exact/>
 					</Switch>
 			</div>
 

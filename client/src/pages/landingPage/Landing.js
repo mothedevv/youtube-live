@@ -15,6 +15,7 @@ function LandingPage() {
 
 		
 		<body>
+			
 			<section className="hero is-info is-fullheight">
 				<div className="hero-head">
 					

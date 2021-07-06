@@ -18,11 +18,11 @@ export default class FetchVenueData extends React.Component {
             <div>
                 {this.state.loading || !this.state.venue ? (<div>looking for your venues!</div>) 
                 : ( 
-                    <div>{this.state.venues.map( venue => 
+                    <div>{this.state.venues.map(venue => 
                     <card>
-                       <h2 key={venue.id}>{venues.name}</h2>   
-                       <p>{venues.address}</p> 
-                       <a src={venues.stat.url}>Go to Venues Website!</a>
+                       <h2 key={venue.id}>{venue.name}</h2>   
+                       <p>{venue.address}</p> 
+                       <a src={venue.stat.url}>Go to Venues Website!</a>
                     </card>                   
                     )}</div>
                     )}

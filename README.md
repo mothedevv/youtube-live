@@ -39,7 +39,7 @@ As a user, I want a channel to stream live music and find information about my f
 Musical Artists and Venue Owners would benefit greatly from making Live Concert Events more accessible to a wider audience. Creating a channel to stream live music would provide a safer and more affordable concert experience for audiences and generate more revenue for both parties. Audiences would benefit from the convenience and flexibiliy of streaming live music from the comfort of their own home with out having to worry about the health risks of an overcrowded ampitheater making it easier for venue owners to maintain covid safety regulations.  
 
 
-## Market Research:
+## Market Research
 
 * About 47% of those surveyed agreed that the idea of going to a major public  event “will scare me for a long time,” per a study last month by Performance Research.- [Variety](https://variety.com/2020/digital/news/post-pandemic-streaming-tv-increase-1234589195/)
     
@@ -49,7 +49,7 @@ Musical Artists and Venue Owners would benefit greatly from making Live Concert 
 
 * 67% of live video viewers are more likely to buy a ticket to a concert or event after watching a live video of that event or a similar one. - [Amp Live](https://www.amplivemusic.com/)
  
-## Current Features
+## Features
 
 [YouTube.Live](#) is an application that provides access to resources pertaining to `live concert events` such as artist, venue, and location information, and video content musical performances. 
 

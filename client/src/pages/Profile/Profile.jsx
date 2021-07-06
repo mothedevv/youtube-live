@@ -20,7 +20,6 @@ class Profile extends Component
 
             <Router>
                 <div>
-                    <body>
                         <section className="hero is-info-dashboard">
                             <div className="hero-body">
                                 <div className="container">
@@ -62,7 +61,6 @@ class Profile extends Component
                             </div>
                         </section>
                         
-                    </body>
                     <div className="profile-page"> 
                         <div className="info">
                             <div className="image">

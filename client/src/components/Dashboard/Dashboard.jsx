@@ -39,7 +39,6 @@ class Dashboard extends Component
         return (
             <Router>
                 <div>
-                    <body>
                         <section className="hero is-info-dashboard">
                             <div className="hero-body">
                                 <div className="container">
@@ -81,7 +80,6 @@ class Dashboard extends Component
                             </div>
                             
                         </section>
-                    </body>
                     <Switch>
                         <Route path="/profile" component={Profile} exact />
                         <Route path="/myartists" component={MyArtists} exact />

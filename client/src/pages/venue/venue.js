@@ -1,5 +1,8 @@
 import React from "react";
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> profile-page
 import Venue from './nationwide.jpeg'
 
 function Venues(){
@@ -10,6 +13,7 @@ function Venues(){
           </div>
             
         </div>    
+<<<<<<< HEAD
 =======
 import Navbar from "../../components/Navbar";
 import Card from "../../components/card";
@@ -22,6 +26,8 @@ function Venue(){
             <Footer />
         </div>
 >>>>>>> 2b2d08316092a4039da1c412f10afae21f4a33ca
+=======
+>>>>>>> profile-page
     )
 }
 

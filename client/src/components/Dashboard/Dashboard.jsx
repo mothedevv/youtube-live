@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import './style.css'
 import 'bulma/css/bulma.min.css';
-import Profile from '../../pages/Profile/Profile.jsx';
+import Profile from '../../pages/profile/Profile.js';
 import MyVenues from "../../pages/MyVenues/MyVenues";
 import MyArtists from "../../pages/MyArtists/MyArtists";
 import Search from "../../pages/Search/Search";

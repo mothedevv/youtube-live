@@ -1,7 +1,7 @@
 import React,{ Component }  from 'react';
 import {BrowserRouter as Router, Link, Switch, Route} from 'react-router-dom';
 import '../../components/Dashboard/style.css'
-import Person from './MoProf.jpg';
+import Person from './6536543.png';
 import Artist from '../../images/bb.jpeg'
 
 class Profile extends Component
@@ -121,16 +121,24 @@ const MyArtists=()=>
 {
     
     return(
+        <div classname="card">
+            <div className="card-content">
+
+            </div>
+        </div>
         
         
-        <div>Artists</div>
         
     )
 }
 
 const MyVenues=()=>
 {
-    return(<h1>MyVenues</h1>)
+    return(<div classname="card">
+        <div classname="card-content">
+
+        </div>
+    </div>)
 }
 
 const Search=()=>

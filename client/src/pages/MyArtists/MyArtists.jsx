@@ -1,7 +1,7 @@
 import React,{ Component }  from 'react';
 import {BrowserRouter as Router, Link, Switch, Route} from 'react-router-dom';
 import MyVenues from '../MyVenues/MyVenues';
-import Profile from '../Profile/Profile';
+import Profile from '../profile/Profile';
 import Search from '../Search/Search';
 
 class MyArtists extends Component

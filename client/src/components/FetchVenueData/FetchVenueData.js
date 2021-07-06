@@ -12,7 +12,6 @@ export default class FetchVenueData extends React.Component {
         this.setState({venue: data.venues})
     }
 
-    
     render(){
         return (
             <div>

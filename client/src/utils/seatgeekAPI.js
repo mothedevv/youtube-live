@@ -1,8 +1,5 @@
 const keywordEl = document.querySelector('#keyword');
 const searchbtn = document.querySelector('.btn');
-const results = document.querySelector('.results');
-const showCon = document.querySelector('#showCon')
-let userShows = [];
 
 
 function callApi(){

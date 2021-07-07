@@ -41,5 +41,4 @@ function LandingPage() {
 }
 
 
-render(<LandingPage />, document.getElementById("root"));
 export default LandingPage;

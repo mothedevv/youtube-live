@@ -47,7 +47,12 @@ function Navbar() {
 				<div id="navbarMenu" className="navbar-menu">
 					<div className="navbar-end">
 						{navLinks.map((link) => (
-							<NavLink name={link.name} toLink={link.toLink} icon={link.icon} />
+							<NavLink
+								key={link.name}
+								name={link.name}
+								toLink={link.toLink}
+								icon={link.icon}
+							/>
 						))}
 					</div>
 				</div>

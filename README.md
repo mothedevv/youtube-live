@@ -6,7 +6,7 @@
 
 Attend live concerts right from the comfort of your own home.  Watch your favorite musical artists and legendary rock bands perform in concert venues from around the globe. Discover rare intimate peformances and historic sold out shows all in one place. Search for upcoming live in events in your area and find information about your favorite artists, venues, and concert locations.  
 
-The is application is deployed on Heroku: [YouTube.Live](/)
+The is application is deployed on Heroku: [YouTube.Live](https://osu-project3.herokuapp.com/)
 
 URL to GitHub Repository: [YouTube.Live Repo](https://github.com/moagermo/youtube-live)
 
@@ -51,38 +51,35 @@ Musical Artists and Venue Owners would benefit greatly from making Live Concert 
  
 ## Features
 
-[YouTube.Live](#) is an application that provides access to resources pertaining to `live concert events` such as artist, venue, and location information, and video content musical performances. 
+[YouTube.Live](#) is an application that provides access to resources pertaining to `live concert events` such as artist, venue, and location information, and video content of previously recorded live performances. 
 
 Users can:
 
---info/facts about artists and musical venues? Stories behind the music/
---share/like/comment on videos and performances.
---Save/create your own library of live music. 
+* Watch videos of musical performances and concert events.
+* Get information on favorites artists and venues
+* Search for upcoming live events throughout United States.
+* Save favorite artists and venues to dashboard for multiple sessions.  
 
 ## Future Development
 
-The Stream live concerts in real-time (add more...)
+* Stream live concert events in real-time. 
+* Purchase concert tickets to live shows through our site.
+* Info on pandemic related restrictions for concerts and festivals.
+* Give users the ability to upload and comment on video content.
+
 
 ## Technologies 
 
 
-[Trello](https://trello.com/) Agile Project Management with Scrum/Kanban Boards
-
-[Adobe Spark](https://spark.adobe.com/page/tRIlDi39DdX6h/) WireFrame/Mockup of UI/UX design.
-
-[ReactJS](https://github.com/facebook/react) A declarative, efficient, and flexible JavaScript library for building user interfaces.
-
-[NodeJS](https://github.com/nodejs/node) open-source, cross-platform, JavaScript runtime environment.
-
-[ExpressJS](https://github.com/expressjs) Fast, unopinionated, minimalist web framework for node.
-
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
-
-[Bulma](/) front end css framework.
-
-[YouTube Data API v3](https://console.cloud.google.com/apis/library/youtube.googleapis.com?project=vaulted-channel-306702) HTTP requests for Live Music Videos.
-
-[SeatGeek API Platform](https://seatgeek.com/build) HTTP requests for information on live concert events, artists, and locations
+* [Trello](https://trello.com/) Agile Project Management with Scrum/Kanban Boards
+* [Adobe Spark](https://spark.adobe.com/page/tRIlDi39DdX6h/) WireFrame/Mockup of UI/UX design.
+* [ReactJS](https://github.com/facebook/react) A declarative, efficient, and flexible JavaScript library for building user interfaces.
+* [NodeJS](https://github.com/nodejs/node) open-source, cross-platform, JavaScript runtime environment.
+* [ExpressJS](https://github.com/expressjs) Fast, unopinionated, minimalist web framework for node.
+* [React Bulma components](https://react-bulma.dev/en) front end css framework.
+* [React Bootstrap](https://github.com/facebookincubator/create-react-app).
+* [YouTube Data API v3](https://console.cloud.google.com/apis/library/youtube.googleapis.com?project=vaulted-channel-306702) HTTP requests for Live Music Videos.
+* [SeatGeek API Platform](https://seatgeek.com/build) HTTP requests for information on live concert events, artists, and locations
 
 ## Installation
 
@@ -98,18 +95,18 @@ Please see the following guide for more information on using [create-react-app](
 
 ## Usage 
 
-Please apply for the following API keys to start retrieving live concert data:
+This application requires the use of third-party API keys. Please request your own personal API keys to use with this application.
 
 [SeatGeek API](https://www.songkick.com/api_key_requests/new).
 
-[YouTube Data API v3](https://developers.google.com/youtube?hl=en) from Google Developer Console.
-
-This application is deployed on Heroku: [YouTube.Live](/)
+[YouTube Data API v3](https://developers.google.com/youtube?hl=en)
 
 
 ## Test
 
 To test this application, visit the deployed application on Heroku: 
+
+[YouTube.Live](https://osu-project3.herokuapp.com/)
 
 There are two options for testing:
 

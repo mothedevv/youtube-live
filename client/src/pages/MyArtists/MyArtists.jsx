@@ -1,8 +1,5 @@
 import React,{ Component }  from 'react';
-import {BrowserRouter as Router, Link, Switch, Route} from 'react-router-dom';
-import MyVenues from '../MyVenues/MyVenues';
-import Profile from '../Profile/Profile';
-import Search from '../Search/Search';
+import {BrowserRouter as Link} from 'react-router-dom';
 
 class MyArtists extends Component
 {
@@ -16,7 +13,6 @@ class MyArtists extends Component
     render()
     {
         return(
-            <Router>
                 <div>
                         <section className="hero is-info-dashboard">
                             <div className="hero-body">
@@ -59,15 +55,8 @@ class MyArtists extends Component
                             </div>
                             
                         </section>
-                    
-                    <Switch>
-                        
-                        <Route path="/profile" component={Profile} exact />
-                        <Route path="/myvenues" component={MyVenues} exact />
-                        <Route path="/search" component={Search} exact />
-                    </Switch>
+
                 </div>
-            </Router>
             
         )
     }

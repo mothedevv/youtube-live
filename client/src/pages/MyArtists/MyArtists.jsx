@@ -18,7 +18,6 @@ class MyArtists extends Component
         return(
             <Router>
                 <div>
-                    <body>
                         <section className="hero is-info-dashboard">
                             <div className="hero-body">
                                 <div className="container">
@@ -60,7 +59,6 @@ class MyArtists extends Component
                             </div>
                             
                         </section>
-                    </body>
                     
                     <Switch>
                         

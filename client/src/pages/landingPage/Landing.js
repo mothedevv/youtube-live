@@ -13,8 +13,6 @@ function LandingPage() {
 
 	return (
 
-		
-		<body>
 			
 			<section className="hero is-info is-fullheight">
 				<div className="hero-head">
@@ -38,8 +36,7 @@ function LandingPage() {
 
 
 			</section>
-    
-</body>
+
 	);
 }
 

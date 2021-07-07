@@ -1,12 +1,5 @@
 import React,{ Component }  from 'react';
-<<<<<<< HEAD
-import {BrowserRouter as Router, Link, Switch, Route} from 'react-router-dom';
-import MyVenues from '../MyVenues/MyVenues';
-import Profile from '../profile/Profile';
-import Search from '../Search/Search';
-=======
 import {BrowserRouter as Link} from 'react-router-dom';
->>>>>>> a1800d245a1016bb3af7ebc1ef3038d12597f134
 
 class MyArtists extends Component
 {

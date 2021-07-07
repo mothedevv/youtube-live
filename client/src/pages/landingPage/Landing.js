@@ -3,16 +3,13 @@ import 'bulma/css/bulma.min.css';
 import './style.css';
 import logo from '../../images/logo.svg'
 import 'font-awesome/css/font-awesome.min.css';
-import { render } from "react-dom";
 import Carousel from "../../components/Carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 
 function LandingPage() {
 	
-
 	return (
-
 			
 			<section className="hero is-info is-fullheight">
 				<div className="hero-head">

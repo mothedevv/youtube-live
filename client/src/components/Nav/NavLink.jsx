@@ -25,5 +25,5 @@ export default function NavLink({ name, toLink, icon }) {
 				<span>{name}</span>
 			</Link>
 		</span>
-	);
+	);        
 }

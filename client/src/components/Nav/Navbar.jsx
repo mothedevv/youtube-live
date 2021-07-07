@@ -11,21 +11,14 @@ function Navbar() {
 		!loggedIn
 			? setNavLinks([
 					{ name: 'Home', toLink: '/', icon: 'fas fa-home' },
-					{ name: 'Venues', toLink: '/venues', icon: 'fas fa-guitar' },
-					{ name: 'Artist', toLink: '/artist', icon: 'fas fa-music' },
 					{ name: 'Login', toLink: '/login', icon: 'fas fa-sign-in-alt' },
 					{ name: 'Signup', toLink: '/signup', icon: 'fas fa-user-plus' },
 			  ])
 			: setNavLinks([
-					{ name: 'Home', toLink: '/', icon: 'fas fa-home' },
-					{ name: 'Venues', toLink: '/venues', icon: 'fas fa-guitar' },
-					{ name: 'Artist', toLink: '/artist', icon: 'fas fa-music' },
-					{ name: 'Social', toLink: '/social', icon: 'fas fa-user-friends' },
-					{
-						name: 'Profile',
-						toLink: '/profile',
-						icon: 'fa fa-user-circle',
-					},
+					{ name: 'Profile', toLink: '/profile', icon: 'fa fa-user-circle' },
+					{ name: 'Search Venues', toLink: '/venues', icon: 'fas fa-guitar' },
+					{ name: 'Search Artists', toLink: '/artists', icon: 'fas fa-music' },
+					{ name: 'Search Videos', toLink: '/searchvideos', icon: 'fas fa-user-friends' },
 					{ name: 'Logout', toLink: '/', icon: 'fas fa-sign-out-alt' },
 			  ]);
 		return () => {

@@ -1,10 +1,9 @@
 import React from 'react';
-// import NavBar from '../NavBar/NavBar';
 import youtube from '../../utils/API'
-import VideoSearch from '../VideoSearch/VideoSearch';
-import VideoPlayer from '../VideoPlayer/VideoPlayer';
-import VideoResults from '../VideoResults/VideoResults';
-import "../video/video.css";
+import VideoSearch from './VideoSearch';
+import VideoPlayer from './VideoPlayer';
+import VideoResults from './VideoResults';
+import "./video.css";
 
 //Youtube API Key
 const API_KEY = process.env.REACT_APP_YOUTUBE_API_KEY

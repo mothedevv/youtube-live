@@ -1,6 +1,6 @@
 import React from 'react';
-import VideoItem from '../VideoItem/VideoItem';
-import "../video/video.css";
+import VideoItem from './VideoItem';
+import "./video.css";
 
 const VideoResults = (props) => {
    const renderedList=props.videos.map((video, key) => {

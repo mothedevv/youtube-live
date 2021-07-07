@@ -13,7 +13,6 @@ function Navbar() {
 					{ name: 'Home', toLink: '/', icon: 'fas fa-home' },
 					{ name: 'Venues', toLink: '/venues', icon: 'fas fa-guitar' },
 					{ name: 'Artist', toLink: '/artist', icon: 'fas fa-music' },
-					{ name: 'Social', toLink: '/social', icon: 'fas fa-user-friends' },
 					{ name: 'Login', toLink: '/login', icon: 'fas fa-sign-in-alt' },
 					{ name: 'Signup', toLink: '/signup', icon: 'fas fa-user-plus' },
 			  ])
@@ -23,8 +22,8 @@ function Navbar() {
 					{ name: 'Artist', toLink: '/artist', icon: 'fas fa-music' },
 					{ name: 'Social', toLink: '/social', icon: 'fas fa-user-friends' },
 					{
-						name: 'Dashboard',
-						toLink: '/dashboard',
+						name: 'Profile',
+						toLink: '/profile',
 						icon: 'fa fa-user-circle',
 					},
 					{ name: 'Logout', toLink: '/', icon: 'fas fa-sign-out-alt' },

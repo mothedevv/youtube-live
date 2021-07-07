@@ -82,7 +82,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 [YouTube Data API v3](https://console.cloud.google.com/apis/library/youtube.googleapis.com?project=vaulted-channel-306702) HTTP requests for Live Music Videos.
 
-[SongKick API](https://www.songkick.com/developer) HTTP requests for information on live concert events, artists, and locations
+[SeatGeek API Platform](https://seatgeek.com/build) HTTP requests for information on live concert events, artists, and locations
 
 ## Installation
 
@@ -100,7 +100,7 @@ Please see the following guide for more information on using [create-react-app](
 
 Please apply for the following API keys to start retrieving live concert data:
 
-[SongKick API](https://www.songkick.com/api_key_requests/new).
+[SeatGeek API](https://www.songkick.com/api_key_requests/new).
 
 [YouTube Data API v3](https://developers.google.com/youtube?hl=en) from Google Developer Console.
 
@@ -163,7 +163,7 @@ We as [Collaborators](#collaborators) pledge to act and interact in ways that co
 
 ## Copyright & Licenses
 
-This application uses third-party data in compliance with the `API Terms of Use Agreement` set forth by [YouTube API Services Terms of Service](https://developers.google.com/terms?hl=en) and [SongKick API Term of Use Agreement](https://www.songkick.com/developer/api-terms-of-use)
+This application uses third-party data in compliance with the `API Terms of Use Agreement` set forth by [YouTube API Services Terms of Service](https://developers.google.com/terms?hl=en) and [SeatGeek API Terms of Use](https://seatgeek.com/api-terms)
 
 The content of this application is licensed under the [Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0). For further details, see the Google [Developers Site Policies](https://developers.google.com/terms/site-policies). 
 

@@ -2,7 +2,13 @@ import React from 'react';
 
 const Footer = () => {
 	return (
-		<footer className="footer p-2">
+		<footer
+			className="footer p-2 "
+			style={{
+				background: 'rgba(0, 0, 0, 0.50)',
+				color: 'white',
+			}}
+		>
 			<div className="container has-text-centered">
 				<p className="copy p-1">
 					Designed by Mo Ager, Anthony DeCapite, Morgan Schall, Kyle Young and

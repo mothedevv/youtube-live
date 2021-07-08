@@ -48,8 +48,8 @@ export default function Login() {
 							ref={passwordRef}
 						/>
 					</div>
-					<div className="text-center">
-						<a href="/signup" className="mb-2">
+					<div className="text-center p-2 mb-2">
+						<a href="/signup" className="mb-2" style={{ color: 'white' }}>
 							Don't have a user profile yet, click here to sign up!
 						</a>
 					</div>

@@ -10,7 +10,6 @@ import MyArtists from './pages/MyArtists/MyArtists';
 import MyVenues from './pages/MyVenues/MyVenues';
 import SearchVideos from './pages/SearchVideos/SearchVideos';
 
-console.log(process.env.REACT_APP_CLIENT_ID);
 
 const App = () => {
 	return (
@@ -23,9 +22,9 @@ const App = () => {
 							<Route exact path="/" component={LandingPage} />
 							<Route exact path="/signup" component={SignUp} />
 							<Route exact path="/login" component={Login} />
-							<Route exact path="/myvenues" component={MyVenues} />
+							<Route exact path="/MyVenues" component={MyVenues} />
 							<Route exact path="/SearchVideos" component={SearchVideos} />
-							<Route exact path="/myartists" component={MyArtists} />
+							<Route exact path="/MyArtists" component={MyArtists} />
 						</Switch>
 					</div>
 				</div>

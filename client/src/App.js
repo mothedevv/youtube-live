@@ -7,25 +7,14 @@ import LiveEvents from './pages/LiveEvents/LiveEvents';
 import Login from './pages/login/Login';
 import MyArtists from './pages/MyArtists/MyArtists';
 import MyVenues from './pages/MyVenues/MyVenues';
-import Profile from './pages/Profile/Profile';
 import SearchVideos from './pages/SearchVideos/SearchVideos';
 import SignUp from './pages/signup/SignUp';
 import { UserContext } from './utils/UserContext';
 
 const App = () => {
-	// const [loggedIn, setLoggedIn] = useState(null);
-	// const [currentUser, setCurrentUser] = useState(null);
 	const [user, setUser] = useState(null);
 	const userValue = useMemo(() => ({ user, setUser }), [user, setUser]);
 
-	// const loggedInState = useMemo(
-	// 	() => ({ loggedIn, setLoggedIn }),
-	// 	[loggedIn, setLoggedIn]
-	// );
-	// const userData = useMemo(
-	// 	() => ({ currentUser, setCurrentUser }),
-	// 	[currentUser, setCurrentUser]
-	// );
 	return (
 		<Router>
 			<UserContext.Provider value={userValue}>
@@ -39,12 +28,11 @@ const App = () => {
 							<Route exact path="/MyVenues" component={MyVenues} />
 							<Route exact path="/SearchVideos" component={SearchVideos} />
 							<Route exact path="/MyArtists" component={MyArtists} />
-							<Route exact path="/Profile" component={Profile} />
 							<Route exact path="/LiveEvents" component={LiveEvents} />
 						</Switch>
 					</div>
+					<Footer />
 				</div>
-				<Footer />
 			</UserContext.Provider>
 		</Router>
 	);

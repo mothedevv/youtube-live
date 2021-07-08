@@ -1,22 +1,11 @@
-import React, { useContext, useEffect, useRef } from 'react';
+import React, { useContext, useRef } from 'react';
 import { Redirect } from 'react-router';
 import User from '../../utils/UserAPI';
 import { UserContext } from '../../utils/UserContext';
 import './login.css';
 
 export default function Login() {
-	// const { loggedIn, setLoggedIn } = useContext(UserContext);
-	// const { currentUser, setCurrentUser } = useContext(UserContext);
 	const { user, setUser } = useContext(UserContext);
-
-	useEffect(() => {
-		console.log(user);
-		// currentUser && setLoggedIn(true);
-		return () => {
-			// console.log(loggedIn);
-			console.log('unmounted');
-		};
-	}, [user]);
 
 	const usernameRef = useRef();
 	const passwordRef = useRef();

@@ -24,7 +24,11 @@ export default function Login() {
 				<form
 					action=""
 					className="col-6 p-4 m-auto"
-					style={{ background: 'rgba(0, 0, 0, 0.50)', borderRadius: '15px' }}
+					style={{
+						background: 'rgba(0, 0, 0, 0.50)',
+						borderRadius: '15px',
+						color: 'white',
+					}}
 				>
 					<div className="mb-3">
 						<label htmlFor="usernameLogin" className="form-label">

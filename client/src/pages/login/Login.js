@@ -2,9 +2,12 @@ import React, { useContext, useRef } from 'react';
 import { Redirect } from 'react-router';
 import User from '../../utils/UserAPI';
 import { UserContext } from '../../utils/UserContext';
+import './login.css';
 
 export default function Login() {
 	const [loggedIn, setLoggedIn] = useContext(UserContext);
+
+	const hover = { '$:hover': { color: 'red' } };
 
 	const usernameRef = useRef();
 	const passwordRef = useRef();
@@ -53,7 +56,7 @@ export default function Login() {
 						/>
 					</div>
 					<div className="text-center p-2 mb-2">
-						<a href="/signup" className="mb-2" style={{ color: 'white' }}>
+						<a href="/signup" className={`mb-2 signup`}>
 							Don't have a user profile yet, click here to sign up!
 						</a>
 					</div>

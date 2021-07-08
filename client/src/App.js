@@ -10,6 +10,8 @@ import MyArtists from './pages/MyArtists/MyArtists';
 import MyVenues from './pages/MyVenues/MyVenues';
 import SearchVideos from './pages/SearchVideos/SearchVideos';
 
+console.log(process.env.REACT_APP_CLIENT_ID);
+
 const App = () => {
 	return (
 		<Router>

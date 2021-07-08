@@ -26,7 +26,7 @@ class VideoArea extends React.Component {
         youtube.get('/search', {
           params: {
               part: 'snippet',
-              maxResults: 5,
+              maxResults: 6,
               q: term,
               key: API_KEY
      
@@ -60,7 +60,7 @@ class VideoArea extends React.Component {
         </div>
     );
 
-   }
+   };
 };
 
 export default VideoArea;

@@ -15,13 +15,15 @@ onInputChange=(event) => {
       return (
         <div className="video-search">
          <form onSubmit={this.onFormSubmit} className="form" >
-         <label htmlFor="search">Search </label>
+         {/* <label htmlFor="search">Search </label> */}
           <input
           onChange={this.onInputChange} type="text" id="search" 
           placeholder="Live Music..." 
           value={this.state.term}>
           </input>
+          <button className="btn btn-danger">search</button>
           </form>
+         
           </div> 
         
       );

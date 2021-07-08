@@ -1,6 +1,7 @@
 import React from 'react';
 import VideoArea from '../../components/Video/VideoArea';
 
+
 function SearchVideos()
 {
     return(

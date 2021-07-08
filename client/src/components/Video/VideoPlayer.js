@@ -1,8 +1,8 @@
 import React from "react";
-import "./video.css";
+// import "./video.css";
 
 
-const VideoPlayer = ({ props }) => {
+const VideoPlayer = ( props ) => {
   if (props.video) {
   const videoSrc=`https://youtube.com/embed/${props.video.id.videoId}`;
   return(  
@@ -10,11 +10,11 @@ const VideoPlayer = ({ props }) => {
       <div className="embed-responsive embeded">
         <iframe allowfullscreen="allowFullScreen"
          title={props.video.snippet.title}
-         src={videoSrc} />
+         src={videoSrc}  />
      </div>
       <div className="card">
-        <div>{props.video.snippet.title}</div>
-       <div>{props.video.snippets.description}</div>
+        <h3>{props.video.snippet.title}</h3>
+       <p>{props.video.snippet.description}</p>
      </div>
    </div>
 );

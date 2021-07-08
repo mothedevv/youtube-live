@@ -7,20 +7,18 @@ function Venues() {
 	const [searchQuery, setSearchQuery] = useState('');
 	const queryVenues = (query) => {
 		console.log(query);
-        const queryVal = query.replace(" ", "-");
+        const queryVal = query.replace(/ +/g, '-');
 		sgAPI
 			.getVenues(queryVal)
 			.then((res) => setSearchResults(res.data.venues))
-			.catch((err) => console.log(err));
+			.catch((error) => console.log(error));
 	};
-	const handleChange = (e) => {
-		const { value } = e.target;
-		console.log(value);
+	const handleChange = (event) => {
+		const { value } = event.target;
 		setSearchQuery(value);
 	};
-	const handleSubmit = (e) => {
-		e.preventDefault();
-		console.log(searchQuery);
+	const handleSubmit = (event) => {
+		event.preventDefault();
 		queryVenues(searchQuery);
 	};
 
@@ -37,14 +35,12 @@ function Venues() {
 							className="form-control"
 							id="venueSearch"
 							placeholder="Enter A City to Search!"
-							onChange={handleChange}
-						/>
+							onChange={handleChange}/>
 					</div>
 					<button
 						type="submit"
 						className="btn btn-success m-3"
-						onClick={handleSubmit}
-					>
+						onClick={handleSubmit}>
 						Search
 					</button>
 				</form>
@@ -57,14 +53,12 @@ function Venues() {
 						margin: '2em 0',
 						padding: '2em 0',
 						borderRadius: '15px',
-					}}
-				>
+					}}>
 					{searchResults.map((venue) => (
 						<div
 							className="card m-2"
 							style={{ width: '18rem' }}
-							key={venue.name}
-						>
+							key={venue.name}>
 							<div className="card-body">
 								<h5 className="card-title">{venue.name}</h5>
 								<h6 className="card-subtitle mb-2 text-muted">
@@ -76,7 +70,7 @@ function Venues() {
 								<p className="card-text">{venue.address}</p>
 								<p className="card-text">{venue.extended_address}</p>
 								<a href={venue.url} className="card-link" target="_blank">
-									SeatGeek Page
+									SeatGeek Venue Page
 								</a>
 							</div>
 						</div>

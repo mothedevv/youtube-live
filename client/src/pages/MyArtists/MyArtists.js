@@ -9,20 +9,18 @@ function Performers() {
 	const [searchQuery, setSearchQuery] = useState('');
 	const queryPerformers = (query) => {
 		console.log(query);
-        const queryVal = query.replace(" ", "-");
+        const queryVal = query.replace(/ +/g, '-');
 		sgAPI
 			.getPerformers(queryVal)
 			.then((res) => setSearchResults(res.data.performers))
-			.catch((err) => console.log(err));
+			.catch((error) => console.log(error));
 	};
-	const handleChange = (e) => {
-		const { value } = e.target;
-		console.log(value);
+	const handleChange = (event) => {
+		const { value } = event.target;
 		setSearchQuery(value);
 	};
-	const handleSubmit = (e) => {
-		e.preventDefault();
-		console.log(searchQuery);
+	const handleSubmit = (event) => {
+		event.preventDefault();
 		queryPerformers(searchQuery);
 	};
 
@@ -31,22 +29,19 @@ function Performers() {
 			<div>
 				<form
 					action=""
-					className="d-flex justify-content-center align-items-center"
-				>
+					className="d-flex justify-content-center align-items-center">
 					<div className="m-3 col-6">
 						<input
 							type="text"
 							className="form-control"
 							id="performerSearch"
 							placeholder="Enter A Performer to Search!"
-							onChange={handleChange}
-						/>
+							onChange={handleChange}/>
 					</div>
 					<button
 						type="submit"
 						className="btn btn-success m-3"
-						onClick={handleSubmit}
-					>
+						onClick={handleSubmit}>
 						Search
 					</button>
 				</form>
@@ -59,14 +54,12 @@ function Performers() {
 						margin: '2em 0',
 						padding: '2em 0',
 						borderRadius: '15px',
-					}}
-				>
+					}}>
 					{searchResults.map((performer) => (
 						<div
 							className="card m-6"
 							style={{ width: '18rem' }}
-							key={performer.name}
-						>
+							key={performer.name}>
 							<div className="card-body">
                               <img src={performer.images.huge} alt={performer.name}/>
 					        	<h5 className="card-title">{performer.name}</h5>
@@ -82,7 +75,6 @@ function Performers() {
                                 <ul className="genres">
                                     <li>{performer.genres[0].name}</li>
                                     <li>{performer.genres[1].name}</li>
-                                    <li>{performer.genres[0].name}</li>
                                 </ul>
                                 </div>
                                 <br />

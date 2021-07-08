@@ -57,7 +57,12 @@ export default function Login() {
 					</div>
 					<div className="text-center p-2 mb-2">
 						<a href="/signup" className={`mb-2 signup`}>
-							Don't have a user profile yet, click here to sign up!
+							Click here to sign up!
+						</a>
+					</div>
+					<div className="text-center p-2 mb-2">
+						<a href="#" className={`mb-2 signup`}>
+							Forgot username or password?
 						</a>
 					</div>
 					<div className="text-center">

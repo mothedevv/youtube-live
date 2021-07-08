@@ -58,7 +58,7 @@ export default function Login() {
 					</div>
 				</form>
 			</div>
-			{loggedIn && <Redirect to="/profile" />}
+			{loggedIn && <Redirect to="/landingPage" />}
 		</>
 	);
 }

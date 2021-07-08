@@ -1,4 +1,4 @@
-// import 'bulma/css/bulma.min.css';
+import 'bulma/css/bulma.min.css';
 import React, { useContext, useEffect, useState } from 'react';
 // import '../pages/landingPage/style.css';
 import { UserContext } from '../../utils/UserContext';
@@ -18,7 +18,8 @@ function Navbar() {
 					{ name: 'Profile', toLink: '/profile', icon: 'fa fa-user-circle' },
 					{ name: 'Search Venues', toLink: '/MyVenues', icon: 'fas fa-guitar' },
 					{ name: 'Search Artists', toLink: '/MyArtists', icon: 'fas fa-music' },
-					{ name: 'Search Videos', toLink: '/searchvideos', icon: 'fas fa-user-friends' },
+					{ name: 'Search Events', toLink: '/LiveEvents', icon: 'fas fa-caret-right' },
+					{ name: 'Search Videos', toLink: '/SearchVideos', icon: 'fas fa-user-friends' },
 					{ name: 'Logout', toLink: '/', icon: 'fas fa-sign-out-alt' },
 			  ]);
 		return () => {

@@ -9,6 +9,7 @@ import { UserProvider } from './utils/UserContext';
 import MyArtists from './pages/MyArtists/MyArtists';
 import MyVenues from './pages/MyVenues/MyVenues';
 import SearchVideos from './pages/SearchVideos/SearchVideos';
+import LiveEvents from './pages/LiveEvents/LiveEvents'
 
 
 const App = () => {
@@ -25,6 +26,7 @@ const App = () => {
 							<Route exact path="/MyVenues" component={MyVenues} />
 							<Route exact path="/SearchVideos" component={SearchVideos} />
 							<Route exact path="/MyArtists" component={MyArtists} />
+							<Route exact path="/LiveEvents" component={LiveEvents} />
 						</Switch>
 					</div>
 				</div>

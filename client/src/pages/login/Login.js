@@ -1,13 +1,22 @@
-import React, { useContext, useRef } from 'react';
+import React, { useContext, useEffect, useRef } from 'react';
 import { Redirect } from 'react-router';
 import User from '../../utils/UserAPI';
 import { UserContext } from '../../utils/UserContext';
 import './login.css';
 
 export default function Login() {
-	const [loggedIn, setLoggedIn] = useContext(UserContext);
+	// const { loggedIn, setLoggedIn } = useContext(UserContext);
+	// const { currentUser, setCurrentUser } = useContext(UserContext);
+	const { user, setUser } = useContext(UserContext);
 
-	const hover = { '$:hover': { color: 'red' } };
+	useEffect(() => {
+		console.log(user);
+		// currentUser && setLoggedIn(true);
+		return () => {
+			// console.log(loggedIn);
+			console.log('unmounted');
+		};
+	}, [user]);
 
 	const usernameRef = useRef();
 	const passwordRef = useRef();
@@ -18,7 +27,9 @@ export default function Login() {
 			username: usernameRef.current.value,
 			password: passwordRef.current.value,
 		})
-			.then((res) => setLoggedIn(res.data.logged_in))
+			.then((res) => {
+				setUser(res.data.user);
+			})
 			.catch((err) => console.log(err));
 	};
 	return (
@@ -71,7 +82,7 @@ export default function Login() {
 					</div>
 				</form>
 			</div>
-			{loggedIn && <Redirect to="/" />}
+			{user && <Redirect to="/" />}
 		</div>
 	);
 }

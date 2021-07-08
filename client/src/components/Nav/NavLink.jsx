@@ -4,12 +4,12 @@ import UserAPI from '../../utils/UserAPI';
 import { UserContext } from '../../utils/UserContext';
 
 export default function NavLink({ name, toLink, icon }) {
-	const [loggedIn, setLoggedIn] = useContext(UserContext);
+	const { user, setUser } = useContext(UserContext);
 
 	const handleLogout = (e) => {
 		e.preventDefault();
 		UserAPI.logout();
-		setLoggedIn(false);
+		setUser(null);
 	};
 
 	return (
@@ -25,5 +25,5 @@ export default function NavLink({ name, toLink, icon }) {
 				<span>{name}</span>
 			</Link>
 		</span>
-	);        
+	);
 }

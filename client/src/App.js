@@ -1,22 +1,34 @@
-import React from 'react';
+import React, { useMemo, useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Footer from './components/Footer';
 import Navbar from './components/Nav/Navbar';
 import LandingPage from './pages/landingPage/Landing';
+import LiveEvents from './pages/LiveEvents/LiveEvents';
 import Login from './pages/login/Login';
-import SignUp from './pages/signup/SignUp';
-import { UserProvider } from './utils/UserContext';
 import MyArtists from './pages/MyArtists/MyArtists';
 import MyVenues from './pages/MyVenues/MyVenues';
-import SearchVideos from './pages/SearchVideos/SearchVideos';
-import LiveEvents from './pages/LiveEvents/LiveEvents'
 import Profile from './pages/Profile/Profile';
-
+import SearchVideos from './pages/SearchVideos/SearchVideos';
+import SignUp from './pages/signup/SignUp';
+import { UserContext } from './utils/UserContext';
 
 const App = () => {
+	// const [loggedIn, setLoggedIn] = useState(null);
+	// const [currentUser, setCurrentUser] = useState(null);
+	const [user, setUser] = useState(null);
+	const userValue = useMemo(() => ({ user, setUser }), [user, setUser]);
+
+	// const loggedInState = useMemo(
+	// 	() => ({ loggedIn, setLoggedIn }),
+	// 	[loggedIn, setLoggedIn]
+	// );
+	// const userData = useMemo(
+	// 	() => ({ currentUser, setCurrentUser }),
+	// 	[currentUser, setCurrentUser]
+	// );
 	return (
 		<Router>
-			<UserProvider>
+			<UserContext.Provider value={userValue}>
 				<div>
 					<Navbar />
 					<div className="container">
@@ -33,7 +45,7 @@ const App = () => {
 					</div>
 				</div>
 				<Footer />
-			</UserProvider>
+			</UserContext.Provider>
 		</Router>
 	);
 };

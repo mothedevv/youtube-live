@@ -11,7 +11,7 @@ export default function SignUp() {
 	const passwordRef = useRef();
 	const passwordCheckRef = useRef();
 
-	const [loggedIn, setLoggedIn] = useContext(UserContext);
+	const { user, setUser } = useContext(UserContext);
 
 	const handleSignUp = async (e) => {
 		e.preventDefault();
@@ -26,7 +26,7 @@ export default function SignUp() {
 					passwordCheck: passwordCheckRef.current.value,
 			  })
 					.then((res) => {
-						setLoggedIn(res.data.logged_in);
+						setUser(res.data.logged_in);
 					})
 					.catch((err) => console.log(err.message))
 			: alert('passwords do not match');
@@ -121,7 +121,7 @@ export default function SignUp() {
 					</div>
 				</form>
 			</div>
-			{loggedIn && <Redirect to="/" />}
+			{user && <Redirect to="/" />}
 		</div>
 	);
 }

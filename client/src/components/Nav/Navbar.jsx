@@ -5,10 +5,11 @@ import { UserContext } from '../../utils/UserContext';
 import NavLink from './NavLink';
 
 function Navbar() {
-	const [loggedIn, setLoggedIn] = useContext(UserContext);
+	// const [loggedIn, setLoggedIn] = useContext(UserContext);
 	const [navLinks, setNavLinks] = useState([]);
+	const { user, setUser } = useContext(UserContext);
 	useEffect(() => {
-		!loggedIn
+		!user
 			? setNavLinks([
 					{ name: 'Home', toLink: '/', icon: 'fas fa-home' },
 					{ name: 'Login', toLink: '/login', icon: 'fas fa-sign-in-alt' },
@@ -38,7 +39,7 @@ function Navbar() {
 			console.log('Nav links set.');
 			console.log('unmounted.');
 		};
-	}, [loggedIn]);
+	}, [user]);
 
 	return (
 		<nav

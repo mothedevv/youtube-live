@@ -17,9 +17,21 @@ function Navbar() {
 			: setNavLinks([
 					{ name: 'Profile', toLink: '/Profile', icon: 'fa fa-user-circle' },
 					{ name: 'Search Venues', toLink: '/MyVenues', icon: 'fas fa-guitar' },
-					{ name: 'Search Artists', toLink: '/MyArtists', icon: 'fas fa-music' },
-					{ name: 'Search Events', toLink: '/LiveEvents', icon: 'fas fa-caret-right' },
-					{ name: 'Search Videos', toLink: '/SearchVideos', icon: 'fas fa-user-friends' },
+					{
+						name: 'Search Artists',
+						toLink: '/MyArtists',
+						icon: 'fas fa-music',
+					},
+					{
+						name: 'Search Events',
+						toLink: '/LiveEvents',
+						icon: 'fas fa-caret-right',
+					},
+					{
+						name: 'Search Videos',
+						toLink: '/SearchVideos',
+						icon: 'fas fa-user-friends',
+					},
 					{ name: 'Logout', toLink: '/', icon: 'fas fa-sign-out-alt' },
 			  ]);
 		return () => {
@@ -29,7 +41,13 @@ function Navbar() {
 	}, [loggedIn]);
 
 	return (
-		<nav className="navbar">
+		<nav
+			className="navbar"
+			style={{
+				background: 'rgba(0, 0, 0, 0.50)',
+				color: 'white',
+			}}
+		>
 			<div className="container">
 				<div className="navbar-brand">
 					<span className="navbar-burger burger" data-target="navbarMenu">

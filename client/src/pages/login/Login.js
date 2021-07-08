@@ -2,9 +2,12 @@ import React, { useContext, useRef } from 'react';
 import { Redirect } from 'react-router';
 import User from '../../utils/UserAPI';
 import { UserContext } from '../../utils/UserContext';
+import './login.css';
 
 export default function Login() {
 	const [loggedIn, setLoggedIn] = useContext(UserContext);
+
+	const hover = { '$:hover': { color: 'red' } };
 
 	const usernameRef = useRef();
 	const passwordRef = useRef();
@@ -19,9 +22,17 @@ export default function Login() {
 			.catch((err) => console.log(err));
 	};
 	return (
-		<>
-			<div className="container my-4 d-flex justify-content-center">
-				<form action="" className="col-4">
+		<div style={{ minHeight: '100vh', marginTop: '3em' }}>
+			<div className="container my-4 p-4">
+				<form
+					action=""
+					className="col-6 p-4 m-auto"
+					style={{
+						background: 'rgba(0, 0, 0, 0.50)',
+						borderRadius: '15px',
+						color: 'white',
+					}}
+				>
 					<div className="mb-3">
 						<label htmlFor="usernameLogin" className="form-label">
 							Username
@@ -44,10 +55,12 @@ export default function Login() {
 							ref={passwordRef}
 						/>
 					</div>
-					<div className="d-flex flex-column justify-content-center">
-						<a href="/signup" className="mb-2">
+					<div className="text-center p-2 mb-2">
+						<a href="/signup" className={`mb-2 signup`}>
 							Don't have a user profile yet, click here to sign up!
 						</a>
+					</div>
+					<div className="text-center">
 						<button
 							type="submit"
 							className="btn btn-primary"
@@ -58,7 +71,7 @@ export default function Login() {
 					</div>
 				</form>
 			</div>
-			{loggedIn && <Redirect to="/landingPage" />}
-		</>
+			{loggedIn && <Redirect to="/" />}
+		</div>
 	);
 }

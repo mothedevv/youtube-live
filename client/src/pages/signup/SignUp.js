@@ -2,8 +2,6 @@ import React, { useContext, useRef } from 'react';
 import { Redirect } from 'react-router';
 import User from '../../utils/UserAPI';
 import { UserContext } from '../../utils/UserContext';
-import 'bulma/css/bulma.min.css';
-import './style.css'
 
 export default function SignUp() {
 	const firstNameRef = useRef();
@@ -35,9 +33,17 @@ export default function SignUp() {
 	};
 
 	return (
-		<>
+		<div style={{ minHeight: '100vh', marginTop: '3em' }}>
 			<div className="container my-4 d-flex justify-content-center">
-				<form action="" className="col-4">
+				<form
+					action=""
+					className="col-6 p-4"
+					style={{
+						background: 'rgba(0, 0, 0, 0.50)',
+						borderRadius: '15px',
+						color: 'white',
+					}}
+				>
 					<div className="mb-3">
 						<label htmlFor="firstNameSignUp" className="form-label">
 							First Name
@@ -104,16 +110,18 @@ export default function SignUp() {
 							ref={passwordCheckRef}
 						/>
 					</div>
-					<button
-						type="submit"
-						className="btn btn-primary"
-						onClick={(e) => handleSignUp(e)}
-					>
-						Sign Up!
-					</button>
+					<div className="text-center m-2">
+						<button
+							type="submit"
+							className="btn btn-primary"
+							onClick={(e) => handleSignUp(e)}
+						>
+							Sign Up!
+						</button>
+					</div>
 				</form>
 			</div>
-			{loggedIn && <Redirect to="/landingPage"/>}
-		</>
+			{loggedIn && <Redirect to="/" />}
+		</div>
 	);
 }

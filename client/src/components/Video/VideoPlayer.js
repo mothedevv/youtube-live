@@ -8,7 +8,7 @@ const VideoPlayer = ( props ) => {
   return(  
     <div>  
       <div className="embed-responsive embeded">
-        <iframe allowfullscreen="allowFullScreen"
+        <iframe allowFullScreen="allowFullScreen"
          title={props.video.snippet.title}
          src={videoSrc}  />
      </div>

@@ -69,7 +69,7 @@ function Venues() {
 								</h6>
 								<p className="card-text">{venue.address}</p>
 								<p className="card-text">{venue.extended_address}</p>
-								<a href={venue.url} className="card-link" target="_blank">
+								<a href={venue.url} className="card-link" target="_blank" rel="noopener noreferrer">
 									SeatGeek Venue Page
 								</a>
 							</div>

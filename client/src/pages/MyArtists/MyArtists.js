@@ -78,7 +78,7 @@ function Performers() {
                                 </ul>
                                 </div>
                                 <br />
-								<a href={performer.url} className="card-link" target="_blank">
+								<a href={performer.url} className="card-link" target="_blank" rel="noopener noreferrer">
 									Visit their Page! 
 								</a>
 							</div>

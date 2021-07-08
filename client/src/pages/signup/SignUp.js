@@ -113,7 +113,7 @@ export default function SignUp() {
 					</button>
 				</form>
 			</div>
-			{loggedIn && <Redirect to="/profile" />}
+			{loggedIn && <Redirect to="/landingPage"/>}
 		</>
 	);
 }

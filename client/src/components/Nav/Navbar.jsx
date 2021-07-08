@@ -7,7 +7,7 @@ import NavLink from './NavLink';
 function Navbar() {
 	// const [loggedIn, setLoggedIn] = useContext(UserContext);
 	const [navLinks, setNavLinks] = useState([]);
-	const { user, setUser } = useContext(UserContext);
+	const { user } = useContext(UserContext);
 	useEffect(() => {
 		!user
 			? setNavLinks([
@@ -16,7 +16,6 @@ function Navbar() {
 					{ name: 'Signup', toLink: '/signup', icon: 'fas fa-user-plus' },
 			  ])
 			: setNavLinks([
-					{ name: 'Profile', toLink: '/Profile', icon: 'fa fa-user-circle' },
 					{ name: 'Search Venues', toLink: '/MyVenues', icon: 'fas fa-guitar' },
 					{
 						name: 'Search Artists',
@@ -36,8 +35,8 @@ function Navbar() {
 					{ name: 'Logout', toLink: '/', icon: 'fas fa-sign-out-alt' },
 			  ]);
 		return () => {
-			console.log('Nav links set.');
-			console.log('unmounted.');
+			// console.log('Nav links set.');
+			// console.log('unmounted.');
 		};
 	}, [user]);
 

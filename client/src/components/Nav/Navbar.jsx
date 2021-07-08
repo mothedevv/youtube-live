@@ -16,6 +16,7 @@ function Navbar() {
 					{ name: 'Signup', toLink: '/signup', icon: 'fas fa-user-plus' },
 			  ])
 			: setNavLinks([
+					{ name: 'Home', toLink: '/', icon: 'fas fa-home' },
 					{ name: 'Search Venues', toLink: '/MyVenues', icon: 'fas fa-guitar' },
 					{
 						name: 'Search Artists',
